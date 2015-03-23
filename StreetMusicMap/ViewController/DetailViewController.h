@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  DetailViewController.h
 //  StreetMusicMap
 //
 //  Created by Henrique Velloso on 3/23/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UITableViewController
+@interface DetailViewController : UIViewController
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@import QuartzCore;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
