@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C55616471AC07E30004A4805 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C55616461AC07E30004A4805 /* HomeViewController.m */; };
+		C556164B1AC07E5A004A4805 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C556164A1AC07E5A004A4805 /* MapViewController.m */; };
+		C556164E1AC07E73004A4805 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C556164D1AC07E73004A4805 /* AboutViewController.m */; };
 		C55810B51AB9035A0074836F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810B41AB9035A0074836F /* main.m */; };
 		C55810B81AB9035A0074836F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810B71AB9035A0074836F /* AppDelegate.m */; };
-		C55810BB1AB9035A0074836F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810BA1AB9035A0074836F /* FirstViewController.m */; };
-		C55810BE1AB9035A0074836F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810BD1AB9035A0074836F /* SecondViewController.m */; };
 		C55810C11AB9035A0074836F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55810BF1AB9035A0074836F /* Main.storyboard */; };
 		C55810C31AB9035A0074836F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C55810C21AB9035A0074836F /* Images.xcassets */; };
-		C55810C61AB9035A0074836F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C55810C41AB9035A0074836F /* LaunchScreen.xib */; };
 		C55810D21AB9035A0074836F /* StreetMusicMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810D11AB9035A0074836F /* StreetMusicMapTests.m */; };
+		C55E69191AC08AE000F45B78 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55E69181AC08AE000F45B78 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,21 +29,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C55616451AC07E30004A4805 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ViewController/HomeViewController.h; sourceTree = "<group>"; };
+		C55616461AC07E30004A4805 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ViewController/HomeViewController.m; sourceTree = "<group>"; };
+		C55616491AC07E5A004A4805 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ViewController/MapViewController.h; sourceTree = "<group>"; };
+		C556164A1AC07E5A004A4805 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ViewController/MapViewController.m; sourceTree = "<group>"; };
+		C556164C1AC07E73004A4805 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = ViewController/AboutViewController.h; sourceTree = "<group>"; };
+		C556164D1AC07E73004A4805 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = ViewController/AboutViewController.m; sourceTree = "<group>"; };
 		C55810AF1AB9035A0074836F /* StreetMusicMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetMusicMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55810B31AB9035A0074836F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C55810B41AB9035A0074836F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C55810B61AB9035A0074836F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C55810B71AB9035A0074836F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C55810B91AB9035A0074836F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		C55810BA1AB9035A0074836F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		C55810BC1AB9035A0074836F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		C55810BD1AB9035A0074836F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		C55810C01AB9035A0074836F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C55810C21AB9035A0074836F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C55810C51AB9035A0074836F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C55810CB1AB9035A0074836F /* StreetMusicMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreetMusicMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55810D01AB9035A0074836F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C55810D11AB9035A0074836F /* StreetMusicMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreetMusicMapTests.m; sourceTree = "<group>"; };
+		C55E69181AC08AE000F45B78 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55E69191AC08AE000F45B78 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,10 +67,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C55616481AC07E34004A4805 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C55616451AC07E30004A4805 /* HomeViewController.h */,
+				C55616461AC07E30004A4805 /* HomeViewController.m */,
+				C55616491AC07E5A004A4805 /* MapViewController.h */,
+				C556164A1AC07E5A004A4805 /* MapViewController.m */,
+				C556164C1AC07E73004A4805 /* AboutViewController.h */,
+				C556164D1AC07E73004A4805 /* AboutViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		C556164F1AC07E9B004A4805 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				C55810BF1AB9035A0074836F /* Main.storyboard */,
+			);
+			name = VIew;
+			sourceTree = "<group>";
+		};
 		C55810A61AB903590074836F = {
 			isa = PBXGroup;
 			children = (
 				C55810B11AB9035A0074836F /* StreetMusicMap */,
+				C55E691A1AC08E9C00F45B78 /* Framework */,
 				C55810CE1AB9035A0074836F /* StreetMusicMapTests */,
 				C55810B01AB9035A0074836F /* Products */,
 			);
@@ -86,13 +112,9 @@
 			children = (
 				C55810B61AB9035A0074836F /* AppDelegate.h */,
 				C55810B71AB9035A0074836F /* AppDelegate.m */,
-				C55810B91AB9035A0074836F /* FirstViewController.h */,
-				C55810BA1AB9035A0074836F /* FirstViewController.m */,
-				C55810BC1AB9035A0074836F /* SecondViewController.h */,
-				C55810BD1AB9035A0074836F /* SecondViewController.m */,
-				C55810BF1AB9035A0074836F /* Main.storyboard */,
 				C55810C21AB9035A0074836F /* Images.xcassets */,
-				C55810C41AB9035A0074836F /* LaunchScreen.xib */,
+				C556164F1AC07E9B004A4805 /* VIew */,
+				C55616481AC07E34004A4805 /* ViewController */,
 				C55810B21AB9035A0074836F /* Supporting Files */,
 			);
 			path = StreetMusicMap;
@@ -122,6 +144,14 @@
 				C55810D01AB9035A0074836F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C55E691A1AC08E9C00F45B78 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				C55E69181AC08AE000F45B78 /* MapKit.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +203,12 @@
 				TargetAttributes = {
 					C55810AE1AB9035A0074836F = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = DNPZJLD62G;
+						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
+						};
 					};
 					C55810CA1AB9035A0074836F = {
 						CreatedOnToolsVersion = 6.2;
@@ -205,7 +241,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C55810C11AB9035A0074836F /* Main.storyboard in Resources */,
-				C55810C61AB9035A0074836F /* LaunchScreen.xib in Resources */,
 				C55810C31AB9035A0074836F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,9 +259,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C55810BE1AB9035A0074836F /* SecondViewController.m in Sources */,
 				C55810B81AB9035A0074836F /* AppDelegate.m in Sources */,
-				C55810BB1AB9035A0074836F /* FirstViewController.m in Sources */,
+				C556164E1AC07E73004A4805 /* AboutViewController.m in Sources */,
+				C556164B1AC07E5A004A4805 /* MapViewController.m in Sources */,
+				C55616471AC07E30004A4805 /* HomeViewController.m in Sources */,
 				C55810B51AB9035A0074836F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,14 +292,6 @@
 				C55810C01AB9035A0074836F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C55810C41AB9035A0074836F /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C55810C51AB9035A0074836F /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -349,9 +377,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StreetMusicMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -359,9 +392,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StreetMusicMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -418,6 +456,7 @@
 				C55810D71AB9035A0074836F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C55810D81AB9035A0074836F /* Build configuration list for PBXNativeTarget "StreetMusicMapTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +465,7 @@
 				C55810DA1AB9035A0074836F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
