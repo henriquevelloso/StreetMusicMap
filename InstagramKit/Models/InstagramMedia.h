@@ -39,6 +39,7 @@
 @property (nonatomic, readonly) NSArray *comments;
 @property (nonatomic, readonly) NSArray *tags;
 @property (nonatomic, readonly) CLLocationCoordinate2D location;
+@property (strong, nonatomic) NSString * locationName;
 @property (nonatomic, readonly) NSString* filter;
 @property (nonatomic, readonly) NSDictionary* images;
 

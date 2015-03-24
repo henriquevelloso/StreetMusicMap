@@ -8,7 +8,11 @@
 
 #import "HomeTableViewCell.h"
 
-@implementation HomeTableViewCell
+
+@implementation HomeTableViewCell 
+
+@synthesize delegate;
+
 
 - (void)awakeFromNib {
     // Initialization code
@@ -19,5 +23,17 @@
 
     // Configure the view for the selected state
 }
+- (IBAction)goToDetail:(UIButton *)sender {
+    
+    
+    if ([self.delegate respondsToSelector:@selector(homeTableViewCell:media:)]) {
+        
+        [self.delegate homeTableViewCell:self media:_media];
+        
+    }
+       
+}
 
 @end
+
+

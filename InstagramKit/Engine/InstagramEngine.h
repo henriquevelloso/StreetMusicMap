@@ -130,6 +130,11 @@ typedef NS_OPTIONS(NSInteger, IKLoginScope) {
 
 
 
+- (void)getLocationName:(CLLocationCoordinate2D)location count:(NSInteger)count maxId:(NSString *)maxId
+            withSuccess:(InstagramMediaBlock)success
+                failure:(InstagramFailureBlock)failure;
+
+
 #pragma mark - Users -
 
 

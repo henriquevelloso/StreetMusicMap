@@ -541,6 +541,25 @@ typedef enum
     }];
 }
 
+                         - (void)getLocationName:(CLLocationCoordinate2D)location count:(NSInteger)count maxId:(NSString *)maxId
+                     withSuccess:(InstagramMediaBlock)success
+                     failure:(InstagramFailureBlock)failure {
+                         
+                         NSDictionary *params = [self parametersFromCount:count maxId:maxId andMaxIdType:kPaginationMaxId];
+                         [self getPath:[NSString stringWithFormat:@"locations/search?lat=%f&lng=%f",location.latitude,location.longitude] parameters:params responseModel:[InstagramMedia class] success:^(id response, InstagramPaginationInfo *paginationInfo) {
+                             if(success)
+                             {
+                                 NSArray *objects = response;
+                                 success(objects, paginationInfo);
+                             }
+                         } failure:^(NSError *error, NSInteger statusCode) {
+                             if(failure)
+                             {
+                                 failure(error);
+                             }
+                         }];
+                     }
+                         
 
 #pragma mark - Users -
 

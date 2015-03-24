@@ -42,6 +42,7 @@
         _user = [[InstagramUser alloc] initWithInfo:info[kUser]];
         _userHasLiked = [info[kUserHasLiked] boolValue];
         _createdDate = [[NSDate alloc] initWithTimeIntervalSince1970:[info[kCreatedDate] doubleValue]];
+       // _locationName = [[NSString alloc] initWithString:info[kLocationName]];
         _link = [[NSString alloc] initWithString:info[kLink]];
         _caption = [[InstagramComment alloc] initWithInfo:info[kCaption]];
         _likesCount = [(info[kLikes])[kCount] integerValue];
@@ -61,6 +62,35 @@
         
         if (IKNotNull(info[kLocation])) {
             _location = CLLocationCoordinate2DMake([(info[kLocation])[kLatitude] doubleValue], [(info[kLocation])[kLongitude] doubleValue]);
+            
+          
+                
+                
+               NSString *haystack = _caption.text;
+                
+               NSRange range1 = [haystack.lowercaseString rangeOfString:@" at "];
+               NSRange range2 = [haystack.lowercaseString rangeOfString:@". filmed"];
+                
+                NSString * temp = [haystack substringWithRange:NSMakeRange(range1.location + 4, range2.location - range1.location - 4)];
+                
+                if ([temp.lowercaseString rangeOfString:@"the "].location == 0) {
+                    
+                    temp = [temp substringWithRange:NSMakeRange(4, temp.length -4)];
+                }
+
+                _locationName = [self sentenceCapitalizedString:temp];
+            
+            
+            if (!_locationName) {
+                
+                if ((info[kLocation])[kLocationName]) {
+                    _locationName = (info[kLocation])[kLocationName];
+                }
+                
+            }
+        
+            
+           
         }
         
         _filter = info[kFilter];
@@ -74,6 +104,15 @@
         }
     }
     return self;
+}
+
+- (NSString *)sentenceCapitalizedString:(NSString*)value {
+    if (![value length]) {
+        return [NSString string];
+    }
+    NSString *uppercase = [[value substringToIndex:1] uppercaseString];
+    NSString *lowercase = [value substringFromIndex:1];
+    return [uppercase stringByAppendingString:lowercase];
 }
 
 - (void)initializeImages:(NSDictionary *)imagesInfo

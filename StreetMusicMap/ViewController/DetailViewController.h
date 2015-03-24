@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InstagramMedia.h"
+#import "InstagramKit.h"
 
 @interface DetailViewController : UIViewController
+
+    @property (strong, nonatomic) InstagramMedia *media;
+    @property (weak, nonatomic) IBOutlet UILabel *lblTest;
 
 @end

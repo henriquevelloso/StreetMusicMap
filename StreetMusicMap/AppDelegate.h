@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InstagramKit.h"
+
 @import QuartzCore;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

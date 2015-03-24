@@ -7,16 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InstagramMedia.h"
 #import "AsyncImageView.h"
 
+@protocol HomeTableViewCellDelegate;
 
-@interface HomeTableViewCell : UITableViewCell
+
+@interface HomeTableViewCell : UITableViewCell {
+    
+    id <HomeTableViewCellDelegate> __unsafe_unretained delegate;
+    
+}
+@property (unsafe_unretained) id <HomeTableViewCellDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblLocation;
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
 @property (weak, nonatomic) IBOutlet UILabel *lblLikes;
 @property (weak, nonatomic) IBOutlet UILabel *lblComments;
-@property (weak, nonatomic) IBOutlet UIImageView *imgPhoto;
+@property (weak, nonatomic) IBOutlet AsyncImageView *imgPhoto;
+@property (strong, nonatomic) InstagramMedia *media;
 
+
+@end
+
+
+@protocol HomeTableViewCellDelegate <NSObject>
+
+@optional
+
+- (void)homeTableViewCell:(HomeTableViewCell *)controller media:(NSString *)media;
 
 @end

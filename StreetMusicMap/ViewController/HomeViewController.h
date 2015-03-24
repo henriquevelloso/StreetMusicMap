@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "InstagramKit.h"
+#import "HomeTableViewCell.h"
 
-@interface HomeViewController : UITableViewController
+@interface HomeViewController : UITableViewController <HomeTableViewCellDelegate>
+
+@property (strong, nonatomic) InstagramPaginationInfo *paginationInfo;
 
 @end
