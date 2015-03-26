@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "InstagramMedia.h"
+#import "InstagramKit.h"
 #import "AsyncImageView.h"
 
 @protocol HomeTableViewCellDelegate;
@@ -35,6 +35,6 @@
 
 @optional
 
-- (void)homeTableViewCell:(HomeTableViewCell *)controller media:(NSString *)media;
+- (void)homeTableViewCell:(HomeTableViewCell *)controller media:(InstagramMedia *)media;
 
 @end

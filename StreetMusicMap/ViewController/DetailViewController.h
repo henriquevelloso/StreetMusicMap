@@ -9,10 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "InstagramMedia.h"
 #import "InstagramKit.h"
+#import "AsyncImageView.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UITableViewController
 
     @property (strong, nonatomic) InstagramMedia *media;
-    @property (weak, nonatomic) IBOutlet UILabel *lblTest;
+
+
+/*
+    @property (weak, nonatomic) IBOutlet AsyncImageView *postImage;
+    @property (weak, nonatomic) IBOutlet UIView *videoView;
+    @property (weak, nonatomic) IBOutlet UIButton *btnPlayArrow;
+*/
 
 @end

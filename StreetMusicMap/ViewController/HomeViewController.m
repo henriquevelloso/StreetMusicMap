@@ -9,11 +9,10 @@
 #import "HomeViewController.h"
 #import "HomeTableViewCell.h"
 #import "InstagramMedia.h"
-#import "DetailViewController.h"
+#import "DetailTableViewController.h"
 
 @interface HomeViewController ()
 {
-    InstagramMedia *currentMedia;
     NSMutableArray *postArray;
     
 
@@ -42,37 +41,31 @@
 #pragma mark Custom Methods
 
 -(void) loadData {
-    InstagramEngine *sharedEngine = [[InstagramEngine alloc] init];// [InstagramEngine sharedEngine];
-    
     
     NSString *userID = @"1028760904";
     
-        
-        
-        
-         [[InstagramEngine sharedEngine] getMediaForUser:userID count:40 maxId:self.paginationInfo.nextMaxId withSuccess:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
+    InstagramEngine *sharedEngine = [[InstagramEngine alloc] init];
+    [sharedEngine getMediaForUser:userID count:40 maxId:self.paginationInfo.nextMaxId withSuccess:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
              
              postArray = [[NSMutableArray alloc] initWithArray:media];
              [self.tableView reloadData];
              
              
-         } failure:^(NSError *error) {
+    } failure:^(NSError *error) {
              
              
-         }];
+    }];
     
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return postArray.count;
 }
@@ -164,8 +157,8 @@
      
      if ([segue.identifier isEqualToString:@"segueDetail"])
      {
-         DetailViewController *detailViewController = segue.destinationViewController;
-         detailViewController.media = currentMedia;
+         DetailTableViewController *detailViewController = segue.destinationViewController;
+         detailViewController.currentMedia = _currentMedia;
         
      }
 
@@ -176,26 +169,10 @@
 
 - (void)homeTableViewCell:(HomeTableViewCell *)controller media:(InstagramMedia *)media {
     
-    currentMedia = media;
+    _currentMedia = media;
     [self performSegueWithIdentifier:@"segueDetail" sender:nil];
 
 }
 
-
-/*
-- (void)homeTableViewCell:(HomeTableViewCell *)controller liked:(BOOL)liked {
-    dicLikes = controller.dicLikes;
-    dicLikesFromCurrentProfile = controller.dicLikesFromCurrentProfile;
-    
-    [self updateSectionHeaderForSection:controller.tag];
-}
-
-- (void)homeTableViewCell:(HomeTableViewCell *)controller commentsPhotoId:(NSString *)commentsPhotoId photoUserId:(NSString *)photoUserId {
-    commentsPhotoObjectId = commentsPhotoId;
-    commentsPhotoUserObjectId = photoUserId;
-    
-    [self performSegueWithIdentifier:@"segueComments" sender:nil];
-}
-*/
 
 @end

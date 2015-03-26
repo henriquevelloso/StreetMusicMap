@@ -70,15 +70,25 @@
                 
                NSRange range1 = [haystack.lowercaseString rangeOfString:@" at "];
                NSRange range2 = [haystack.lowercaseString rangeOfString:@". filmed"];
+            
+            NSString * temp = @"";
+            
+            if(range1.length == 0) {
                 
-                NSString * temp = [haystack substringWithRange:NSMakeRange(range1.location + 4, range2.location - range1.location - 4)];
-                
-                if ([temp.lowercaseString rangeOfString:@"the "].location == 0) {
+            }
+            else if (range2.length == 0) {
+                temp = [haystack substringWithRange:NSMakeRange(range1.location + 4, haystack.length - range1.location - 4)];
+            }
+            else {
+                temp = [haystack substringWithRange:NSMakeRange(range1.location + 4, range2.location - range1.location - 4)];
+            }
+            
+            if ([temp.lowercaseString rangeOfString:@"the "].location == 0) {
                     
-                    temp = [temp substringWithRange:NSMakeRange(4, temp.length -4)];
-                }
+                temp = [temp substringWithRange:NSMakeRange(4, temp.length -4)];
+            }
 
-                _locationName = [self sentenceCapitalizedString:temp];
+            _locationName = [self sentenceCapitalizedString:temp];
             
             
             if (!_locationName) {

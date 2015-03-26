@@ -15,6 +15,9 @@
 		C55810C11AB9035A0074836F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55810BF1AB9035A0074836F /* Main.storyboard */; };
 		C55810C31AB9035A0074836F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C55810C21AB9035A0074836F /* Images.xcassets */; };
 		C55810D21AB9035A0074836F /* StreetMusicMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810D11AB9035A0074836F /* StreetMusicMapTests.m */; };
+		C55BBCAE1AC365C80069EB1C /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BBCAD1AC365C80069EB1C /* DetailTableViewController.m */; };
+		C55BBCB11AC3668C0069EB1C /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BBCB01AC3668C0069EB1C /* VideoTableViewCell.m */; };
+		C55BBCB41AC3669A0069EB1C /* CommentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BBCB31AC3669A0069EB1C /* CommentsTableViewCell.m */; };
 		C55E69191AC08AE000F45B78 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55E69181AC08AE000F45B78 /* MapKit.framework */; };
 		C571FD881AC09BC400652942 /* InstagramEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C571FD761AC09BC400652942 /* InstagramEngine.m */; };
 		C571FD891AC09BC400652942 /* InstagramKit.plist in Resources */ = {isa = PBXBuildFile; fileRef = C571FD781AC09BC400652942 /* InstagramKit.plist */; };
@@ -44,6 +47,9 @@
 		C571FDC11AC0A4DE00652942 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C571FDC01AC0A4DE00652942 /* AsyncImageView.m */; };
 		C571FDC71AC0BD4A00652942 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDC51AC0BD3500652942 /* QuartzCore.framework */; };
 		C571FDCA1AC0CF0500652942 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C571FDC91AC0CF0500652942 /* DetailViewController.m */; };
+		C571FDCC1AC20B8F00652942 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDCB1AC20B8F00652942 /* MediaPlayer.framework */; };
+		C571FDCE1AC20FF100652942 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDCD1AC20FF100652942 /* AVFoundation.framework */; };
+		C5C77DA21AC4916E00FF62D2 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C77DA11AC4916E00FF62D2 /* Util.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +79,12 @@
 		C55810CB1AB9035A0074836F /* StreetMusicMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreetMusicMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55810D01AB9035A0074836F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C55810D11AB9035A0074836F /* StreetMusicMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreetMusicMapTests.m; sourceTree = "<group>"; };
+		C55BBCAC1AC365C80069EB1C /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTableViewController.h; path = ViewController/DetailTableViewController.h; sourceTree = "<group>"; };
+		C55BBCAD1AC365C80069EB1C /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTableViewController.m; path = ViewController/DetailTableViewController.m; sourceTree = "<group>"; };
+		C55BBCAF1AC3668C0069EB1C /* VideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoTableViewCell.h; path = ViewController/VideoTableViewCell.h; sourceTree = "<group>"; };
+		C55BBCB01AC3668C0069EB1C /* VideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoTableViewCell.m; path = ViewController/VideoTableViewCell.m; sourceTree = "<group>"; };
+		C55BBCB21AC3669A0069EB1C /* CommentsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentsTableViewCell.h; path = ViewController/CommentsTableViewCell.h; sourceTree = "<group>"; };
+		C55BBCB31AC3669A0069EB1C /* CommentsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentsTableViewCell.m; path = ViewController/CommentsTableViewCell.m; sourceTree = "<group>"; };
 		C55E69181AC08AE000F45B78 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C571FD751AC09BC400652942 /* InstagramEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramEngine.h; sourceTree = "<group>"; };
 		C571FD761AC09BC400652942 /* InstagramEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramEngine.m; sourceTree = "<group>"; };
@@ -125,6 +137,10 @@
 		C571FDC51AC0BD3500652942 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C571FDC81AC0CF0500652942 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ViewController/DetailViewController.h; sourceTree = "<group>"; };
 		C571FDC91AC0CF0500652942 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ViewController/DetailViewController.m; sourceTree = "<group>"; };
+		C571FDCB1AC20B8F00652942 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C571FDCD1AC20FF100652942 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C5C77DA01AC4916E00FF62D2 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		C5C77DA11AC4916E00FF62D2 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +148,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C571FDCE1AC20FF100652942 /* AVFoundation.framework in Frameworks */,
 				C571FDC71AC0BD4A00652942 /* QuartzCore.framework in Frameworks */,
+				C571FDCC1AC20B8F00652942 /* MediaPlayer.framework in Frameworks */,
 				C571FDBA1AC09C9D00652942 /* UIKit.framework in Frameworks */,
 				C571FDB81AC09C9700652942 /* Foundation.framework in Frameworks */,
 				C571FDB61AC09C8E00652942 /* CoreGraphics.framework in Frameworks */,
@@ -155,16 +173,10 @@
 		C55616481AC07E34004A4805 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C55616451AC07E30004A4805 /* HomeViewController.h */,
-				C55616461AC07E30004A4805 /* HomeViewController.m */,
-				C571FDBB1AC0A35200652942 /* HomeTableViewCell.h */,
-				C571FDBC1AC0A35200652942 /* HomeTableViewCell.m */,
-				C55616491AC07E5A004A4805 /* MapViewController.h */,
-				C556164A1AC07E5A004A4805 /* MapViewController.m */,
-				C556164C1AC07E73004A4805 /* AboutViewController.h */,
-				C556164D1AC07E73004A4805 /* AboutViewController.m */,
-				C571FDC81AC0CF0500652942 /* DetailViewController.h */,
-				C571FDC91AC0CF0500652942 /* DetailViewController.m */,
+				C5C77D9C1AC47D9E00FF62D2 /* Home */,
+				C5C77D9F1AC47DC700FF62D2 /* Map */,
+				C5C77D9E1AC47DBF00FF62D2 /* About */,
+				C5C77D9D1AC47DB300FF62D2 /* Detail */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -199,6 +211,8 @@
 		C55810B11AB9035A0074836F /* StreetMusicMap */ = {
 			isa = PBXGroup;
 			children = (
+				C5C77DA01AC4916E00FF62D2 /* Util.h */,
+				C5C77DA11AC4916E00FF62D2 /* Util.m */,
 				C55810B61AB9035A0074836F /* AppDelegate.h */,
 				C55810B71AB9035A0074836F /* AppDelegate.m */,
 				C55810C21AB9035A0074836F /* Images.xcassets */,
@@ -241,6 +255,8 @@
 				C571FDBE1AC0A4DE00652942 /* AsyncImageView */,
 				C571FD731AC09BC400652942 /* InstagramKit */,
 				C571FD911AC09BD400652942 /* AFNetworking */,
+				C571FDCD1AC20FF100652942 /* AVFoundation.framework */,
+				C571FDCB1AC20B8F00652942 /* MediaPlayer.framework */,
 				C571FDC51AC0BD3500652942 /* QuartzCore.framework */,
 				C571FDB91AC09C9D00652942 /* UIKit.framework */,
 				C571FDB71AC09C9700652942 /* Foundation.framework */,
@@ -328,6 +344,50 @@
 				C571FDC01AC0A4DE00652942 /* AsyncImageView.m */,
 			);
 			path = AsyncImageView;
+			sourceTree = "<group>";
+		};
+		C5C77D9C1AC47D9E00FF62D2 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C55616451AC07E30004A4805 /* HomeViewController.h */,
+				C55616461AC07E30004A4805 /* HomeViewController.m */,
+				C571FDBB1AC0A35200652942 /* HomeTableViewCell.h */,
+				C571FDBC1AC0A35200652942 /* HomeTableViewCell.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		C5C77D9D1AC47DB300FF62D2 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C571FDC81AC0CF0500652942 /* DetailViewController.h */,
+				C571FDC91AC0CF0500652942 /* DetailViewController.m */,
+				C55BBCAC1AC365C80069EB1C /* DetailTableViewController.h */,
+				C55BBCAD1AC365C80069EB1C /* DetailTableViewController.m */,
+				C55BBCAF1AC3668C0069EB1C /* VideoTableViewCell.h */,
+				C55BBCB01AC3668C0069EB1C /* VideoTableViewCell.m */,
+				C55BBCB21AC3669A0069EB1C /* CommentsTableViewCell.h */,
+				C55BBCB31AC3669A0069EB1C /* CommentsTableViewCell.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		C5C77D9E1AC47DBF00FF62D2 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				C556164C1AC07E73004A4805 /* AboutViewController.h */,
+				C556164D1AC07E73004A4805 /* AboutViewController.m */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		C5C77D9F1AC47DC700FF62D2 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C55616491AC07E5A004A4805 /* MapViewController.h */,
+				C556164A1AC07E5A004A4805 /* MapViewController.m */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,10 +501,12 @@
 				C571FDBD1AC0A35200652942 /* HomeTableViewCell.m in Sources */,
 				C571FDA81AC09BD400652942 /* AFHTTPRequestOperationManager.m in Sources */,
 				C571FD881AC09BC400652942 /* InstagramEngine.m in Sources */,
+				C5C77DA21AC4916E00FF62D2 /* Util.m in Sources */,
 				C571FDAC1AC09BD400652942 /* AFURLConnectionOperation.m in Sources */,
 				C571FDB01AC09BD400652942 /* UIImageView+AFNetworking.m in Sources */,
 				C571FD901AC09BC400652942 /* InstagramUser.m in Sources */,
 				C571FD8F1AC09BC400652942 /* InstagramTag.m in Sources */,
+				C55BBCB41AC3669A0069EB1C /* CommentsTableViewCell.m in Sources */,
 				C571FDCA1AC0CF0500652942 /* DetailViewController.m in Sources */,
 				C571FDAD1AC09BD400652942 /* AFURLRequestSerialization.m in Sources */,
 				C55810B81AB9035A0074836F /* AppDelegate.m in Sources */,
@@ -457,6 +519,8 @@
 				C571FDAA1AC09BD400652942 /* AFNetworkReachabilityManager.m in Sources */,
 				C571FDAF1AC09BD400652942 /* AFURLSessionManager.m in Sources */,
 				C556164B1AC07E5A004A4805 /* MapViewController.m in Sources */,
+				C55BBCB11AC3668C0069EB1C /* VideoTableViewCell.m in Sources */,
+				C55BBCAE1AC365C80069EB1C /* DetailTableViewController.m in Sources */,
 				C571FD8D1AC09BC400652942 /* InstagramModel.m in Sources */,
 				C55616471AC07E30004A4805 /* HomeViewController.m in Sources */,
 				C571FD8B1AC09BC400652942 /* InstagramComment.m in Sources */,
