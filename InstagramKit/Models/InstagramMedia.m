@@ -67,25 +67,46 @@
                 
                 
                NSString *haystack = _caption.text;
-                
+            NSInteger charDelCount = 4;
                NSRange range1 = [haystack.lowercaseString rangeOfString:@" at "];
                NSRange range2 = [haystack.lowercaseString rangeOfString:@". filmed"];
             
             NSString * temp = @"";
             
             if(range1.length == 0) {
+                charDelCount = 9;
+               range1 = [haystack.lowercaseString rangeOfString:@" next to "];
+            }
+            
+            
+            if(range1.length == 0) {
+                charDelCount = 9;
+               range1 = [haystack.lowercaseString rangeOfString:@" next do "];
+            }
+            
+            if(range1.length == 0) {
+                charDelCount = 12;
+                range1 = [haystack.lowercaseString rangeOfString:@"in front of "];
+            }
+            
+            if(range1.length == 0) {
+                charDelCount = 10;
+                range1 = [haystack.lowercaseString rangeOfString:@" close do "];
+            }
+            
+            if(range1.length == 0) {
                 
             }
             else if (range2.length == 0) {
-                temp = [haystack substringWithRange:NSMakeRange(range1.location + 4, haystack.length - range1.location - 4)];
+                temp = [haystack substringWithRange:NSMakeRange(range1.location + charDelCount, haystack.length - range1.location - charDelCount)];
             }
             else {
-                temp = [haystack substringWithRange:NSMakeRange(range1.location + 4, range2.location - range1.location - 4)];
+                temp = [haystack substringWithRange:NSMakeRange(range1.location + charDelCount, range2.location - range1.location - charDelCount)];
             }
             
             if ([temp.lowercaseString rangeOfString:@"the "].location == 0) {
                     
-                temp = [temp substringWithRange:NSMakeRange(4, temp.length -4)];
+                temp = [temp substringWithRange:NSMakeRange(charDelCount, temp.length -charDelCount)];
             }
 
             _locationName = [self sentenceCapitalizedString:temp];

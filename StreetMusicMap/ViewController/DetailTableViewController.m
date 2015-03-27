@@ -25,7 +25,9 @@
     [super viewDidLoad];
     
  
-    
+    self.navigationController.view.backgroundColor =
+    [UIColor colorWithPatternImage: [UIImage imageNamed:@"Default"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
     
     self.tableView.estimatedRowHeight = 50;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -91,6 +93,9 @@
     
     
 }
+
+
+
 
 
 /*

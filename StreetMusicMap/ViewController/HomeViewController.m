@@ -10,6 +10,7 @@
 #import "HomeTableViewCell.h"
 #import "InstagramMedia.h"
 #import "DetailTableViewController.h"
+#import "Util.h"
 
 @interface HomeViewController ()
 {
@@ -27,6 +28,10 @@
     // Do any additional setup after loading the view.
     
     
+    self.navigationController.view.backgroundColor =
+    [UIColor colorWithPatternImage: [UIImage imageNamed:@"Default"]];
+    self.tableView.backgroundColor = [UIColor clearColor];
+        
     self.tabBarItem.imageInsets = UIEdgeInsetsMake(-16, 0, 0, -10);
     
     [self loadData];
@@ -43,22 +48,45 @@
 
 #pragma mark Custom Methods
 
+
+
+
 -(void) loadData {
     
     NSString *userID = @"1028760904";
     
     InstagramEngine *sharedEngine = [[InstagramEngine alloc] init];
-    [sharedEngine getMediaForUser:userID count:40 maxId:self.paginationInfo.nextMaxId withSuccess:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
-             
-             postArray = [[NSMutableArray alloc] initWithArray:media];
-             [self.tableView reloadData];
-             
-             
+    
+    if (!postArray) {
+        postArray = [[NSMutableArray alloc] init];
+    }
+    
+    
+    [sharedEngine getMediaForUser:userID
+                            count:30
+                            maxId:self.currentPaginationInfo.nextMaxId
+                      withSuccess:^(NSArray *media, InstagramPaginationInfo *paginationInfo)
+    {
+    
+        if (paginationInfo) {
+            self.currentPaginationInfo = paginationInfo;
+        }
+        for (InstagramMedia *item in media) {
+            
+            if (![postArray containsObject:item]) {
+                [postArray addObject:item];
+            }
+            
+        }
+        
+        
+        [self.tableView reloadData];
+
     } failure:^(NSError *error) {
              
              
     }];
-    
+
 }
 
 #pragma mark - Table view data source
@@ -81,6 +109,8 @@
      if (postArray.count >= indexPath.row+1) {
          InstagramMedia *mediaOld = postArray[indexPath.row];
          
+         
+         
          cell.delegate = self;
          cell.tag = indexPath.section;
          
@@ -98,17 +128,8 @@
          cell.media = mediaOld;
       
          
-         /*
-            [[InstagramEngine sharedEngine] getLocationName:mediaOld.location count:1 maxId:nil withSuccess:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
-                
-                mediaOld.locationName = media[indexPath.row];
-                
-            } failure:^(NSError *error) {
-         
-                
-            }];
-  */
-         
+
+
      }
      else
          [cell.imageView setImage:nil];
@@ -117,39 +138,20 @@
  }
  
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
 
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
 
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if(self.currentPaginationInfo) {
+        if ([indexPath isEqual:[NSIndexPath indexPathForRow:[self tableView:self.tableView numberOfRowsInSection:0]-15 inSection:0]]) {
+            
+            NSLog(@"reload");
+            [self loadData];
+        }
+    }
+}
 
 
  #pragma mark - Navigation

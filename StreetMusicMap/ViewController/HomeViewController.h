@@ -12,7 +12,7 @@
 
 @interface HomeViewController : UITableViewController <HomeTableViewCellDelegate>
 
-@property (strong, nonatomic) InstagramPaginationInfo *paginationInfo;
+@property (strong, nonatomic) InstagramPaginationInfo *currentPaginationInfo;
 @property (strong, nonatomic) InstagramMedia *currentMedia;
 
 
