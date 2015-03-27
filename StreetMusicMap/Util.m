@@ -143,6 +143,35 @@
 
 
 
++ (UIImage*)imageWithBlurredImageWithImage:(UIImage*)image withBlurRadius:(CGFloat)blurRadius{
+    UIGraphicsBeginImageContext(image.size);
+    CGContextRef context =  UIGraphicsGetCurrentContext();
+    CGContextScaleCTM(context, 1, -1);
+    CGContextTranslateCTM(context, 0, -image.size.height);
+    CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), image.CGImage);
+    CGContextDrawImage(context, CGRectMake(0, 0, image.size.width, image.size.height), [self blurImage: image withBottomInset: image.size.height blurRadius: blurRadius].CGImage);
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
++ (UIImage*)blurImage:(UIImage*)image withBottomInset:(CGFloat)inset blurRadius:(CGFloat)radius{
+    
+    image =  [UIImage imageWithCGImage: CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, image.size.height - inset, image.size.width,inset))];
+    
+    CIImage *ciImage = [CIImage imageWithCGImage:image.CGImage];
+    CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
+    [filter setValue:ciImage forKey:kCIInputImageKey];
+    [filter setValue:@(radius) forKey:kCIInputRadiusKey];
+    
+    CIImage *outputCIImage = filter.outputImage;
+    CIContext *context = [CIContext contextWithOptions:nil];
+    
+    return [UIImage imageWithCGImage: [context createCGImage:outputCIImage fromRect:ciImage.extent]];
+    
+}
+
+
 
 
 

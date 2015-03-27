@@ -10,8 +10,11 @@
 #import "VideoTableViewCell.h"
 #import "CommentsTableViewCell.h"
 #import "Util.h"
+#import <QuartzCore/QuartzCore.h>
+@import AVFoundation;
 
-@interface DetailTableViewController ()
+@interface DetailTableViewController () 
+
 
 
 @end
@@ -20,6 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+ 
     
     
     self.tableView.estimatedRowHeight = 50;
@@ -35,6 +40,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - Table view data source
 
@@ -58,6 +65,7 @@
         [cell.imgPostImage setImageURL:_currentMedia.lowResolutionImageURL];
         cell.lblLocation.text = _currentMedia.locationName;
         cell.lblDescription.text = _currentMedia.caption.text;
+        cell.currentMedia = _currentMedia;
         
         // self.tableView.separatorInset = UIEdgeInsetsMake(0, 56, 0, 3);
         cell.separatorInset = UIEdgeInsetsMake(0, 500, 0, 500);

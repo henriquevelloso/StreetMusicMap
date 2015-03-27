@@ -13,7 +13,6 @@
 		C55810B51AB9035A0074836F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810B41AB9035A0074836F /* main.m */; };
 		C55810B81AB9035A0074836F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810B71AB9035A0074836F /* AppDelegate.m */; };
 		C55810C11AB9035A0074836F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55810BF1AB9035A0074836F /* Main.storyboard */; };
-		C55810C31AB9035A0074836F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C55810C21AB9035A0074836F /* Images.xcassets */; };
 		C55810D21AB9035A0074836F /* StreetMusicMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810D11AB9035A0074836F /* StreetMusicMapTests.m */; };
 		C55BBCAE1AC365C80069EB1C /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BBCAD1AC365C80069EB1C /* DetailTableViewController.m */; };
 		C55BBCB11AC3668C0069EB1C /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BBCB01AC3668C0069EB1C /* VideoTableViewCell.m */; };
@@ -46,10 +45,11 @@
 		C571FDBD1AC0A35200652942 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C571FDBC1AC0A35200652942 /* HomeTableViewCell.m */; };
 		C571FDC11AC0A4DE00652942 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C571FDC01AC0A4DE00652942 /* AsyncImageView.m */; };
 		C571FDC71AC0BD4A00652942 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDC51AC0BD3500652942 /* QuartzCore.framework */; };
-		C571FDCA1AC0CF0500652942 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C571FDC91AC0CF0500652942 /* DetailViewController.m */; };
 		C571FDCC1AC20B8F00652942 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDCB1AC20B8F00652942 /* MediaPlayer.framework */; };
 		C571FDCE1AC20FF100652942 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDCD1AC20FF100652942 /* AVFoundation.framework */; };
 		C5C77DA21AC4916E00FF62D2 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C77DA11AC4916E00FF62D2 /* Util.m */; };
+		C5C77DA51AC4CA7400FF62D2 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C77DA41AC4CA7400FF62D2 /* ConfigViewController.m */; };
+		C5C77DA81AC4D3E000FF62D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C77DA71AC4D3E000FF62D2 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +75,6 @@
 		C55810B61AB9035A0074836F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C55810B71AB9035A0074836F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C55810C01AB9035A0074836F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C55810C21AB9035A0074836F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C55810CB1AB9035A0074836F /* StreetMusicMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreetMusicMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55810D01AB9035A0074836F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C55810D11AB9035A0074836F /* StreetMusicMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreetMusicMapTests.m; sourceTree = "<group>"; };
@@ -135,12 +134,13 @@
 		C571FDBF1AC0A4DE00652942 /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncImageView.h; sourceTree = "<group>"; };
 		C571FDC01AC0A4DE00652942 /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncImageView.m; sourceTree = "<group>"; };
 		C571FDC51AC0BD3500652942 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		C571FDC81AC0CF0500652942 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ViewController/DetailViewController.h; sourceTree = "<group>"; };
-		C571FDC91AC0CF0500652942 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ViewController/DetailViewController.m; sourceTree = "<group>"; };
 		C571FDCB1AC20B8F00652942 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C571FDCD1AC20FF100652942 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		C5C77DA01AC4916E00FF62D2 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		C5C77DA11AC4916E00FF62D2 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		C5C77DA31AC4CA7400FF62D2 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigViewController.h; path = ViewController/ConfigViewController.h; sourceTree = "<group>"; };
+		C5C77DA41AC4CA7400FF62D2 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfigViewController.m; path = ViewController/ConfigViewController.m; sourceTree = "<group>"; };
+		C5C77DA71AC4D3E000FF62D2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +177,7 @@
 				C5C77D9F1AC47DC700FF62D2 /* Map */,
 				C5C77D9E1AC47DBF00FF62D2 /* About */,
 				C5C77D9D1AC47DB300FF62D2 /* Detail */,
+				C5C77DA61AC4CA7A00FF62D2 /* Config */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -215,7 +216,7 @@
 				C5C77DA11AC4916E00FF62D2 /* Util.m */,
 				C55810B61AB9035A0074836F /* AppDelegate.h */,
 				C55810B71AB9035A0074836F /* AppDelegate.m */,
-				C55810C21AB9035A0074836F /* Images.xcassets */,
+				C5C77DA71AC4D3E000FF62D2 /* Images.xcassets */,
 				C556164F1AC07E9B004A4805 /* VIew */,
 				C55616481AC07E34004A4805 /* Controller */,
 				C55810B21AB9035A0074836F /* Supporting Files */,
@@ -360,8 +361,6 @@
 		C5C77D9D1AC47DB300FF62D2 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				C571FDC81AC0CF0500652942 /* DetailViewController.h */,
-				C571FDC91AC0CF0500652942 /* DetailViewController.m */,
 				C55BBCAC1AC365C80069EB1C /* DetailTableViewController.h */,
 				C55BBCAD1AC365C80069EB1C /* DetailTableViewController.m */,
 				C55BBCAF1AC3668C0069EB1C /* VideoTableViewCell.h */,
@@ -388,6 +387,15 @@
 				C556164A1AC07E5A004A4805 /* MapViewController.m */,
 			);
 			name = Map;
+			sourceTree = "<group>";
+		};
+		C5C77DA61AC4CA7A00FF62D2 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C5C77DA31AC4CA7400FF62D2 /* ConfigViewController.h */,
+				C5C77DA41AC4CA7400FF62D2 /* ConfigViewController.m */,
+			);
+			name = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,9 +484,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C77DA81AC4D3E000FF62D2 /* Images.xcassets in Resources */,
 				C55810C11AB9035A0074836F /* Main.storyboard in Resources */,
 				C571FD891AC09BC400652942 /* InstagramKit.plist in Resources */,
-				C55810C31AB9035A0074836F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,7 +515,6 @@
 				C571FD901AC09BC400652942 /* InstagramUser.m in Sources */,
 				C571FD8F1AC09BC400652942 /* InstagramTag.m in Sources */,
 				C55BBCB41AC3669A0069EB1C /* CommentsTableViewCell.m in Sources */,
-				C571FDCA1AC0CF0500652942 /* DetailViewController.m in Sources */,
 				C571FDAD1AC09BD400652942 /* AFURLRequestSerialization.m in Sources */,
 				C55810B81AB9035A0074836F /* AppDelegate.m in Sources */,
 				C571FDC11AC0A4DE00652942 /* AsyncImageView.m in Sources */,
@@ -519,6 +526,7 @@
 				C571FDAA1AC09BD400652942 /* AFNetworkReachabilityManager.m in Sources */,
 				C571FDAF1AC09BD400652942 /* AFURLSessionManager.m in Sources */,
 				C556164B1AC07E5A004A4805 /* MapViewController.m in Sources */,
+				C5C77DA51AC4CA7400FF62D2 /* ConfigViewController.m in Sources */,
 				C55BBCB11AC3668C0069EB1C /* VideoTableViewCell.m in Sources */,
 				C55BBCAE1AC365C80069EB1C /* DetailTableViewController.m in Sources */,
 				C571FD8D1AC09BC400652942 /* InstagramModel.m in Sources */,

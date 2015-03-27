@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AsyncImageView.h"
+@import AVFoundation;
+#import "InstagramKit.h"
 
 @interface VideoTableViewCell : UITableViewCell
 
@@ -19,4 +21,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblLocation;
 
 @property (weak, nonatomic) IBOutlet UILabel *lblDescription;
+
+@property (strong, nonatomic) AVPlayer *player;
+@property (strong, nonatomic) InstagramMedia *currentMedia;
+
+
+@property (weak, nonatomic) IBOutlet AsyncImageView *imgBackground;
+
 @end

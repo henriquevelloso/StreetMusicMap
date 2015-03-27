@@ -26,6 +26,8 @@
     [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+
 
     return YES;
 }

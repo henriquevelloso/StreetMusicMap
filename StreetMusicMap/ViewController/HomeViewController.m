@@ -26,6 +26,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    self.tabBarItem.imageInsets = UIEdgeInsetsMake(-16, 0, 0, -10);
+    
     [self loadData];
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoHeader"]];

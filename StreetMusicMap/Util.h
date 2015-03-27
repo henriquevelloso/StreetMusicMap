@@ -23,5 +23,7 @@
 + (void)circularProfile:(AsyncImageView *)imgPrile borderWith:(CGFloat)borderWith;
 + (NSString *)formatDateForString:(NSDate *)formatDate;
 + (NSString*) howLongTimeAgoFromDate: (NSDate*)date;
++ (UIImage*) imageWithBlurredImageWithImage:(UIImage*)image withBlurRadius:(CGFloat)blurRadius;
+
 
 @end
