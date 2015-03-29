@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "InstagramKit.h"
 #import "HomeTableViewCell.h"
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
 
 @interface HomeViewController : UITableViewController <HomeTableViewCellDelegate>
 

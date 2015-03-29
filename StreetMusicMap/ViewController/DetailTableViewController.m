@@ -64,7 +64,10 @@
     if (indexPath.row == 0) {
         VideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"videoCell" forIndexPath:indexPath];
         
-        [cell.imgPostImage setImageURL:_currentMedia.lowResolutionImageURL];
+        
+        [cell.imgPostImage setImageWithURL:_currentMedia.standardResolutionImageURL placeholderImage:[UIImage imageNamed:@"placeholder"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+
+        
         cell.lblLocation.text = _currentMedia.locationName;
         cell.lblDescription.text = _currentMedia.caption.text;
         cell.currentMedia = _currentMedia;
@@ -81,7 +84,9 @@
         
         InstagramComment *comment = _currentMedia.comments[indexPath.row - 1];
         
-        [cell.imgPerfilPhoto setImageURL:comment.user.profilePictureURL];
+        [cell.imgPerfilPhoto setImageWithURL:comment.user.profilePictureURL placeholderImage:[UIImage imageNamed:@"placeholder"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+
+        
         cell.lblName.text = [NSString stringWithFormat:@"%@ - @%@",comment.user.fullName, comment.user.username];
         cell.lblComment.text = comment.text;
         

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "AsyncImageView.h"
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
+
 
 @interface CommentsTableViewCell : UITableViewCell
 

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "InstagramKit.h"
 #import "AsyncImageView.h"
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
+
 
 @protocol HomeTableViewCellDelegate;
 

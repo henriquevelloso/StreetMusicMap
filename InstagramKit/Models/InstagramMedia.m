@@ -105,7 +105,27 @@
                 charDelCount = 10;
                 range1 = [haystack.lowercaseString rangeOfString:@" close do "];
             }
-            
+        
+            if(range1.length == 0) {
+                charDelCount = 8;
+                range1 = [haystack.lowercaseString rangeOfString:@" in the "];
+            }
+        
+        if(range1.length == 0) {
+            charDelCount = 4;
+            range1 = [haystack.lowercaseString rangeOfString:@" in "];
+        }
+        
+        if(range1.length == 0) {
+            charDelCount = 15;
+            range1 = [haystack.lowercaseString rangeOfString:@" performing on "];
+        }
+        
+        if(range1.length == 0) {
+            charDelCount = 9;
+            range1 = [haystack.lowercaseString rangeOfString:@". around "];
+        }
+        
             if(range1.length == 0) {
                 
             }

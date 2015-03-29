@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "InstagramKit.h"
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
+
 
 @interface DetailTableViewController : UITableViewController
 

@@ -348,17 +348,34 @@
                                         </imageView>
                                         <view hidden="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="yJc-2e-4fe" userLabel="Video View">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loader00.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xvl-Cm-xFC" userLabel="Loader">
+                                                    <rect key="frame" x="275" y="275" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="TAy-zu-Z4f"/>
+                                                        <constraint firstAttribute="width" constant="50" id="vKV-Ep-D8g"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="yJc-2e-4fe" secondAttribute="height" multiplier="1:1" id="1bb-Ga-JZK"/>
+                                                <constraint firstAttribute="centerY" secondItem="Xvl-Cm-xFC" secondAttribute="centerY" id="Px2-ED-1w4"/>
+                                                <constraint firstAttribute="centerX" secondItem="Xvl-Cm-xFC" secondAttribute="centerX" id="RXr-wZ-g7r"/>
                                             </constraints>
                                         </view>
                                         <button opaque="NO" alpha="0.60000002384185791" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXg-DE-A1w" userLabel="btnPlay Arrow">
-                                            <rect key="frame" x="250" y="235" width="100" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="130" id="RgU-jO-beR"/>
-                                                <constraint firstAttribute="width" constant="100" id="uM4-kG-Zwd"/>
+                                                <constraint firstAttribute="height" constant="600" id="RgU-jO-beR"/>
+                                                <constraint firstAttribute="width" constant="600" id="uM4-kG-Zwd"/>
                                             </constraints>
                                             <state key="normal" image="playArrow"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="RgU-jO-beR"/>
+                                                    <exclude reference="uM4-kG-Zwd"/>
+                                                </mask>
+                                            </variation>
                                             <connections>
                                                 <action selector="playVideo:" destination="Ov6-Ck-Mwf" eventType="touchUpInside" id="LwO-PW-dip"/>
                                             </connections>
@@ -428,6 +445,7 @@
                                         <constraint firstItem="d04-30-T5z" firstAttribute="centerY" secondItem="HXg-DE-A1w" secondAttribute="centerY" id="076-St-F22"/>
                                         <constraint firstItem="Iwo-J7-q21" firstAttribute="top" secondItem="Fs3-XM-aXN" secondAttribute="bottom" constant="8" id="1Bt-g5-Ujb"/>
                                         <constraint firstItem="Iwo-J7-q21" firstAttribute="leading" secondItem="mzs-SD-Eek" secondAttribute="trailing" constant="8" id="3Pw-IJ-2b9"/>
+                                        <constraint firstItem="HXg-DE-A1w" firstAttribute="height" secondItem="d04-30-T5z" secondAttribute="height" id="6T3-q1-a8x"/>
                                         <constraint firstItem="d04-30-T5z" firstAttribute="leading" secondItem="R6K-t5-PAW" secondAttribute="leading" id="Bhf-xa-SB1"/>
                                         <constraint firstItem="aX9-kU-cvu" firstAttribute="top" secondItem="R6K-t5-PAW" secondAttribute="topMargin" constant="-8" id="DLz-YB-6Gi"/>
                                         <constraint firstItem="Fs3-XM-aXN" firstAttribute="top" secondItem="yJc-2e-4fe" secondAttribute="bottom" constant="8" id="GGT-5I-edr"/>
@@ -440,6 +458,7 @@
                                         <constraint firstItem="Fs3-XM-aXN" firstAttribute="trailing" secondItem="R6K-t5-PAW" secondAttribute="trailingMargin" id="Vqr-BY-18T"/>
                                         <constraint firstItem="Iwo-J7-q21" firstAttribute="top" secondItem="mzs-SD-Eek" secondAttribute="top" constant="2" id="XZ0-Za-gwg"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="aX9-kU-cvu" secondAttribute="trailing" constant="-8" id="YOf-4O-40q"/>
+                                        <constraint firstItem="HXg-DE-A1w" firstAttribute="width" secondItem="d04-30-T5z" secondAttribute="width" id="ZfJ-mT-Qhp"/>
                                         <constraint firstItem="d04-30-T5z" firstAttribute="centerX" secondItem="HXg-DE-A1w" secondAttribute="centerX" id="bee-Xa-1cR"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Iwo-J7-q21" secondAttribute="bottom" constant="1.5" id="dDo-Q7-3kh"/>
                                         <constraint firstItem="d04-30-T5z" firstAttribute="top" secondItem="R6K-t5-PAW" secondAttribute="top" id="gDs-R9-8Oq"/>
@@ -468,6 +487,7 @@
                                     <outlet property="imgPostImage" destination="d04-30-T5z" id="rp3-Vp-579"/>
                                     <outlet property="lblDescription" destination="Iwo-J7-q21" id="dOE-aY-Pvc"/>
                                     <outlet property="lblLocation" destination="Fs3-XM-aXN" id="7cy-1A-rdO"/>
+                                    <outlet property="loader" destination="Xvl-Cm-xFC" id="POD-D8-kUr"/>
                                     <outlet property="viewVideoContent" destination="yJc-2e-4fe" id="0o4-d3-OcL"/>
                                 </connections>
                             </tableViewCell>
@@ -565,6 +585,7 @@
         <image name="configMenu" width="29" height="28"/>
         <image name="descriptionIcon" width="40" height="39"/>
         <image name="feedMenu" width="27" height="28"/>
+        <image name="loader00.png" width="512" height="512"/>
         <image name="locationPin" width="32" height="40"/>
         <image name="mapMenu" width="28" height="28"/>
         <image name="ovelMark" width="80" height="80"/>
