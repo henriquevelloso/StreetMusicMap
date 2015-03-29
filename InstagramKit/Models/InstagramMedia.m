@@ -21,7 +21,7 @@
 #import "InstagramMedia.h"
 #import "InstagramUser.h"
 #import "InstagramComment.h"
-
+#import "InstagramEngine.h"
 
 @interface InstagramMedia ()
 {
@@ -51,18 +51,30 @@
             InstagramUser *user = [[InstagramUser alloc] initWithInfo:userInfo];
             [mLikes addObject:user];
         }
-        
+    
         _commentCount = [(info[kComments])[kCount] integerValue];
+        
         mComments = [[NSMutableArray alloc] init];
-        for (NSDictionary *commentInfo in (info[kComments])[kData]) {
-            InstagramComment *comment = [[InstagramComment alloc] initWithInfo:commentInfo];
-            [mComments addObject:comment];
-        }
+        
+        NSString *mediaId = info[@"id"];
+        [[InstagramEngine sharedEngine] getCommentsOnMedia:mediaId withSuccess:^(NSArray *comments) {
+            
+            [mComments addObjectsFromArray:comments];
+            
+        } failure:^(NSError *error) {
+            
+            
+        }];
+        
+//        for (NSDictionary *commentInfo in (info[kComments])[kData]) {
+//            InstagramComment *comment = [[InstagramComment alloc] initWithInfo:commentInfo];
+//            [mComments addObject:comment];
+//        }
         _tags = [[NSArray alloc] initWithArray:info[kTags]];
         
         if (IKNotNull(info[kLocation])) {
             _location = CLLocationCoordinate2DMake([(info[kLocation])[kLatitude] doubleValue], [(info[kLocation])[kLongitude] doubleValue]);
-            
+        }
           
                 
                 
@@ -122,7 +134,7 @@
         
             
            
-        }
+        
         
         _filter = info[kFilter];
         
