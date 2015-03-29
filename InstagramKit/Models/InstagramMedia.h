@@ -42,6 +42,7 @@
 @property (strong, nonatomic) NSString * locationName;
 @property (nonatomic, readonly) NSString* filter;
 @property (nonatomic, readonly) NSDictionary* images;
+@property (nonatomic, nonatomic) NSString* episode;
 
 @property (nonatomic, readonly) NSURL *thumbnailURL;
 @property (nonatomic, readonly) CGSize thumbnailFrameSize;

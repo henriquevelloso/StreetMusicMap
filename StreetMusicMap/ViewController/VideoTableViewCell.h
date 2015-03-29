@@ -27,6 +27,8 @@
 
 @property (strong, nonatomic) AVPlayer *player;
 @property (strong, nonatomic) InstagramMedia *currentMedia;
+@property (nonatomic) BOOL isPlaying;
+@property (nonatomic) BOOL isVideoLoaded;
 
 
 @property (weak, nonatomic) IBOutlet AsyncImageView *imgBackground;

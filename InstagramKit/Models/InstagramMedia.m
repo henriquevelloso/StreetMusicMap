@@ -75,13 +75,19 @@
         if (IKNotNull(info[kLocation])) {
             _location = CLLocationCoordinate2DMake([(info[kLocation])[kLatitude] doubleValue], [(info[kLocation])[kLongitude] doubleValue]);
         }
-          
-                
-                
-               NSString *haystack = _caption.text;
+        
+        
+            NSString *haystack = _caption.text;
+        
+        
+            NSRange rangeEp = [haystack.lowercaseString rangeOfString:@"streetmusicmap ep."];
+            NSString *episode = [haystack substringWithRange:NSMakeRange(rangeEp.location + 18, 4)];
+            _episode = [episode stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        
             NSInteger charDelCount = 4;
-               NSRange range1 = [haystack.lowercaseString rangeOfString:@" at "];
-               NSRange range2 = [haystack.lowercaseString rangeOfString:@". filmed"];
+            NSRange range1 = [haystack.lowercaseString rangeOfString:@" at "];
+            NSRange range2 = [haystack.lowercaseString rangeOfString:@". filmed"];
             
             NSString * temp = @"";
             

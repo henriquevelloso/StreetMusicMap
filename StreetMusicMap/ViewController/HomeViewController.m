@@ -114,7 +114,7 @@
          cell.delegate = self;
          cell.tag = indexPath.section;
          
-        // [cell.imgPhoto setImageURL:mediaOld.standardResolutionImageURL];
+         cell.lblEpisode.text = [@"Ep. " stringByAppendingString:mediaOld.episode];
          cell.lblLocation.text = mediaOld.locationName;
 
          [cell.imgPhoto setImageWithURL:mediaOld.standardResolutionImageURL placeholderImage:[UIImage imageNamed:@"placeholder"] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];

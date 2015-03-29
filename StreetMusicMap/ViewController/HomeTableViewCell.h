@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblLocation;
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
 @property (weak, nonatomic) IBOutlet UILabel *lblLikes;
+@property (weak, nonatomic) IBOutlet UILabel *lblEpisode;
 @property (weak, nonatomic) IBOutlet UILabel *lblComments;
 @property (weak, nonatomic) IBOutlet AsyncImageView *imgPhoto;
 @property (strong, nonatomic) InstagramMedia *media;
