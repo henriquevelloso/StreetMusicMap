@@ -93,6 +93,7 @@
 		C5FF0CFF1AC8672900114BA1 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF0CED1AC8672900114BA1 /* UIImageView+HighlightedWebCache.m */; };
 		C5FF0D001AC8672900114BA1 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF0CEF1AC8672900114BA1 /* UIImageView+WebCache.m */; };
 		C5FF0D011AC8672900114BA1 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF0CF11AC8672900114BA1 /* UIView+WebCacheOperation.m */; };
+		C5FF0D311AC9B6D300114BA1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF0D301AC9B6D300114BA1 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,6 +244,8 @@
 		C5FF0CEF1AC8672900114BA1 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		C5FF0CF01AC8672900114BA1 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		C5FF0CF11AC8672900114BA1 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		C5FF0D2F1AC9B6D300114BA1 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = ViewController/DetailViewController.h; sourceTree = "<group>"; };
+		C5FF0D301AC9B6D300114BA1 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = ViewController/DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,6 +469,8 @@
 		C5C77D9D1AC47DB300FF62D2 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				C5FF0D2F1AC9B6D300114BA1 /* DetailViewController.h */,
+				C5FF0D301AC9B6D300114BA1 /* DetailViewController.m */,
 				C55BBCAC1AC365C80069EB1C /* DetailTableViewController.h */,
 				C55BBCAD1AC365C80069EB1C /* DetailTableViewController.m */,
 				C55BBCAF1AC3668C0069EB1C /* VideoTableViewCell.h */,
@@ -758,6 +763,7 @@
 				C571FDAF1AC09BD400652942 /* AFURLSessionManager.m in Sources */,
 				C556164B1AC07E5A004A4805 /* MapViewController.m in Sources */,
 				C5FF0CFE1AC8672900114BA1 /* UIImage+MultiFormat.m in Sources */,
+				C5FF0D311AC9B6D300114BA1 /* DetailViewController.m in Sources */,
 				C5FF0CD01AC8643A00114BA1 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
 				C5C77DA51AC4CA7400FF62D2 /* ConfigViewController.m in Sources */,
 				C5FF0CF41AC8672900114BA1 /* NSData+ImageContentType.m in Sources */,

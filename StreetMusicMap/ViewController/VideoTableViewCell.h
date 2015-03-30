@@ -30,7 +30,10 @@
 @property (nonatomic) BOOL isPlaying;
 @property (nonatomic) BOOL isVideoLoaded;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblLikesCount;
+@property (weak, nonatomic) IBOutlet UILabel *lblCommentsCount;
+@property (weak, nonatomic) IBOutlet UILabel *lblEpisode;
+@property (weak, nonatomic) IBOutlet UILabel *lblDate;
 
-@property (weak, nonatomic) IBOutlet AsyncImageView *imgBackground;
 
 @end

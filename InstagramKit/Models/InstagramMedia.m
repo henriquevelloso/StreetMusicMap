@@ -132,6 +132,10 @@
             range1 = [haystack.lowercaseString rangeOfString:@". around "];
         }
         
+        
+      
+        
+        
             if(range1.length == 0) {
                 
             }
