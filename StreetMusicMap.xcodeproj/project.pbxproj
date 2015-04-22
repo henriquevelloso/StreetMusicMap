@@ -890,13 +890,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Henrique Velloso (RHC38265VH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Henrique Velloso (RHC38265VH)";
 				INFOPLIST_FILE = StreetMusicMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3acff723-93e6-4b1f-8594-addc4e88ae61";
+				PROVISIONING_PROFILE = "0a181e16-cc4d-4e42-a2c0-baf0d1412d96";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -906,13 +906,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Henrique Velloso (RHC38265VH)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Henrique Velloso";
 				INFOPLIST_FILE = StreetMusicMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3acff723-93e6-4b1f-8594-addc4e88ae61";
+				PROVISIONING_PROFILE = "0a181e16-cc4d-4e42-a2c0-baf0d1412d96";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
