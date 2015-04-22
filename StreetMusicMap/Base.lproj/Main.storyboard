@@ -349,12 +349,12 @@
                         <viewControllerLayoutGuide type="top" id="rL5-p2-QNL"/>
                         <viewControllerLayoutGuide type="bottom" id="bxS-s3-6c8"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JzQ-Yj-vJa">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="JzQ-Yj-vJa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1036"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isD-ia-zhI" userLabel="Comment View">
-                                <rect key="frame" x="0.0" y="947" width="600" height="40"/>
+                                <rect key="frame" x="0.0" y="996" width="600" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a comment..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KXQ-2f-wOQ">
                                         <rect key="frame" x="86" y="5" width="428" height="30"/>
@@ -366,7 +366,7 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb8-dj-4iG">
                                         <rect key="frame" x="522" y="6" width="70" height="30"/>
-                                        <color key="backgroundColor" red="0.39825994320000002" green="0.39825994320000002" blue="0.39825994320000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.054200276599686459" green="0.5" blue="0.29866180014610899" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="OzL-3g-sLY"/>
                                             <constraint firstAttribute="width" constant="70" id="VuB-vf-XQR"/>
@@ -401,17 +401,13 @@
                                     <constraint firstAttribute="height" constant="40" id="jKB-MC-6oB"/>
                                     <constraint firstAttribute="trailing" secondItem="Sb8-dj-4iG" secondAttribute="trailing" constant="8" id="mXo-wx-L1r"/>
                                     <constraint firstItem="Sb8-dj-4iG" firstAttribute="centerY" secondItem="KXQ-2f-wOQ" secondAttribute="centerY" constant="1" id="nEN-vu-d63"/>
-                                    <constraint firstItem="KXQ-2f-wOQ" firstAttribute="leading" secondItem="isD-ia-zhI" secondAttribute="leading" constant="8" id="tj7-LC-y8w"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="tj7-LC-y8w"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="700" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sCL-Cv-cZ7">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="947"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="996"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="videoCell" rowHeight="673" id="n5f-0L-nrJ" userLabel="Video Cell" customClass="VideoTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -560,7 +556,7 @@
                                             <outlet property="viewVideoContent" destination="h0X-BD-4Ka" id="8sb-AF-I6F"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="commentsCell" rowHeight="58" id="VHM-Og-l4B" userLabel="Comments Cell" customClass="CommentsTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="commentsCell" rowHeight="58" id="VHM-Og-l4B" userLabel="Comments Cell" customClass="CommentsTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VHM-Og-l4B" id="Z0m-jG-6S2">
@@ -589,7 +585,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="GRM-Qs-POp" firstAttribute="top" secondItem="Z0m-jG-6S2" secondAttribute="topMargin" id="2n2-fx-H9S"/>
                                                 <constraint firstItem="29b-bF-0bZ" firstAttribute="leading" secondItem="GRM-Qs-POp" secondAttribute="trailing" constant="8" id="9Re-z1-42b"/>
@@ -615,7 +611,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="isD-ia-zhI" firstAttribute="top" secondItem="sCL-Cv-cZ7" secondAttribute="bottom" id="62l-W6-bIr"/>
                             <constraint firstItem="sCL-Cv-cZ7" firstAttribute="top" secondItem="JzQ-Yj-vJa" secondAttribute="top" id="Ckj-ZT-0s2"/>
@@ -623,19 +619,24 @@
                             <constraint firstItem="sCL-Cv-cZ7" firstAttribute="leading" secondItem="JzQ-Yj-vJa" secondAttribute="leading" id="Ljy-9N-C89"/>
                             <constraint firstAttribute="trailing" secondItem="isD-ia-zhI" secondAttribute="trailing" id="YLd-on-GWy"/>
                             <constraint firstAttribute="trailing" secondItem="sCL-Cv-cZ7" secondAttribute="trailing" id="Zg9-da-CLr"/>
-                            <constraint firstItem="bxS-s3-6c8" firstAttribute="top" secondItem="isD-ia-zhI" secondAttribute="bottom" id="vr9-Wi-j5d"/>
+                            <constraint firstItem="bxS-s3-6c8" firstAttribute="bottom" secondItem="isD-ia-zhI" secondAttribute="bottom" id="j1S-vI-kYb"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1100"/>
                     <connections>
                         <outlet property="TableViewDetail" destination="sCL-Cv-cZ7" id="1vM-nS-H9O"/>
+                        <outlet property="btnLike" destination="rOB-ub-edg" id="oOA-cm-rJ0"/>
+                        <outlet property="btnSendComment" destination="Sb8-dj-4iG" id="fhC-9o-nRL"/>
+                        <outlet property="constraintBottom" destination="j1S-vI-kYb" id="Dsr-U7-Qrn"/>
+                        <outlet property="viewComments" destination="isD-ia-zhI" id="Abg-DA-bCU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSa-Rc-VBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2214" y="-998"/>
+            <point key="canvasLocation" x="2246" y="-1043"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZrD-vw-OCt">

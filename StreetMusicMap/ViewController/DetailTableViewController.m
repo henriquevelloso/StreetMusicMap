@@ -24,9 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
- 
-    self.navigationController.view.backgroundColor =
-    [UIColor colorWithPatternImage: [UIImage imageNamed:@"Default"]];
+    
+    self.navigationController.view.backgroundColor = [UIColor colorWithPatternImage: [UIImage imageNamed:@"Default"]];
     self.tableView.backgroundColor = [UIColor clearColor];
     
     self.tableView.estimatedRowHeight = 50;
@@ -81,6 +80,8 @@
     else {
         
          CommentsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"commentsCell" forIndexPath:indexPath];
+        
+        cell.backgroundColor = cell.contentView.backgroundColor;
         
         InstagramComment *comment = _currentMedia.comments[indexPath.row - 1];
         

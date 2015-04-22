@@ -17,4 +17,11 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *TableViewDetail;
 
+@property (weak, nonatomic) IBOutlet UIView *viewComments;
+@property (weak, nonatomic) IBOutlet UIButton *btnLike;
+@property (weak, nonatomic) IBOutlet UIButton *btnSendComment;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBottom;
+
+
 @end

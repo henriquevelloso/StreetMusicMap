@@ -13,13 +13,18 @@
 #import <QuartzCore/QuartzCore.h>
 @import AVFoundation;
 
-@interface DetailViewController ()
+@interface DetailViewController () {
 
 
+    CGFloat _initialConstant;
+
+}
 
 @end
 
 @implementation DetailViewController
+
+    static CGFloat keyboardHeightOffset = -50;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,11 +41,55 @@
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoHeader"]];
     
+    self.btnLike.layer.cornerRadius = 5;
+    self.btnSendComment.layer.cornerRadius = 5;
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void) keyboardWillBeHidden:(NSNotification *)notification {
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(self.TableViewDetail.contentInset.top, 0.0, 0.0, 0);
+    
+    [UIView animateWithDuration:0.25f animations:^{
+        self.TableViewDetail.contentInset = contentInsets;
+        self.TableViewDetail.scrollIndicatorInsets = contentInsets;
+    }];
+}
+
+- (void)keyboardWillShow:(NSNotification*)notification {
+    
+    // Getting the keyboard frame and animation duration.
+    CGRect keyboardFrame = [notification.userInfo[UIKeyboardFrameBeginUserInfoKey] CGRectValue];
+    NSTimeInterval keyboardAnimationDuration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    if (!_initialConstant) {
+        _initialConstant =  _constraintBottom.constant;
+    }
+    
+    // If screen can fit everything, leave the constant untouched.
+    _constraintBottom.constant = MAX(keyboardFrame.size.height + keyboardHeightOffset, _initialConstant);
+    [UIView animateWithDuration:keyboardAnimationDuration animations:^{
+        // This method will automatically animate all views to satisfy new constants.
+        [self.view layoutIfNeeded];
+    }];
+    
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    
+    if(self.TableViewDetail.contentOffset.y<=0){
+    
+        _constraintBottom.constant = _initialConstant;
+        [self.view  endEditing:YES];
+        
+        return;
+    }
+    
 }
 
 
