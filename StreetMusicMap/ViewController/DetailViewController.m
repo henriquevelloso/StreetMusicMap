@@ -29,6 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+        self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoHeader"]];
  
     self.navigationController.view.backgroundColor =
     [UIColor colorWithPatternImage: [UIImage imageNamed:@"Default"]];

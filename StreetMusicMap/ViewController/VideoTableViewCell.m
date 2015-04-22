@@ -17,6 +17,7 @@
     self.viewVideoContent.hidden = YES;
 
     
+    
     // Initialization code
     // Subscribe to the AVPlayerItem's DidPlayToEndTime notification.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playMediaFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:_player];
