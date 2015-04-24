@@ -18,6 +18,7 @@
 		C55BBCB11AC3668C0069EB1C /* VideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BBCB01AC3668C0069EB1C /* VideoTableViewCell.m */; };
 		C55BBCB41AC3669A0069EB1C /* CommentsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C55BBCB31AC3669A0069EB1C /* CommentsTableViewCell.m */; };
 		C55E69191AC08AE000F45B78 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55E69181AC08AE000F45B78 /* MapKit.framework */; };
+		C561DD101AE9742E0008A148 /* LoginWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C561DD0F1AE9742E0008A148 /* LoginWebViewViewController.m */; };
 		C571FD881AC09BC400652942 /* InstagramEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = C571FD761AC09BC400652942 /* InstagramEngine.m */; };
 		C571FD891AC09BC400652942 /* InstagramKit.plist in Resources */ = {isa = PBXBuildFile; fileRef = C571FD781AC09BC400652942 /* InstagramKit.plist */; };
 		C571FD8A1AC09BC400652942 /* IKUserInPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = C571FD7B1AC09BC400652942 /* IKUserInPhoto.m */; };
@@ -129,6 +130,8 @@
 		C55BBCB21AC3669A0069EB1C /* CommentsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommentsTableViewCell.h; path = ViewController/CommentsTableViewCell.h; sourceTree = "<group>"; };
 		C55BBCB31AC3669A0069EB1C /* CommentsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommentsTableViewCell.m; path = ViewController/CommentsTableViewCell.m; sourceTree = "<group>"; };
 		C55E69181AC08AE000F45B78 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C561DD0E1AE9742E0008A148 /* LoginWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginWebViewViewController.h; sourceTree = "<group>"; };
+		C561DD0F1AE9742E0008A148 /* LoginWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginWebViewViewController.m; sourceTree = "<group>"; };
 		C571FD751AC09BC400652942 /* InstagramEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramEngine.h; sourceTree = "<group>"; };
 		C571FD761AC09BC400652942 /* InstagramEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramEngine.m; sourceTree = "<group>"; };
 		C571FD771AC09BC400652942 /* InstagramKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramKit.h; sourceTree = "<group>"; };
@@ -504,6 +507,8 @@
 			children = (
 				C5C77DA31AC4CA7400FF62D2 /* ConfigViewController.h */,
 				C5C77DA41AC4CA7400FF62D2 /* ConfigViewController.m */,
+				C561DD0E1AE9742E0008A148 /* LoginWebViewViewController.h */,
+				C561DD0F1AE9742E0008A148 /* LoginWebViewViewController.m */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -735,6 +740,7 @@
 				C571FDA81AC09BD400652942 /* AFHTTPRequestOperationManager.m in Sources */,
 				C5FF0CCF1AC8643A00114BA1 /* README.md in Sources */,
 				C571FD881AC09BC400652942 /* InstagramEngine.m in Sources */,
+				C561DD101AE9742E0008A148 /* LoginWebViewViewController.m in Sources */,
 				C5C77DA21AC4916E00FF62D2 /* Util.m in Sources */,
 				C5FF0CFC1AC8672900114BA1 /* UIButton+WebCache.m in Sources */,
 				C571FDAC1AC09BD400652942 /* AFURLConnectionOperation.m in Sources */,

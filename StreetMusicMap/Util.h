@@ -24,6 +24,6 @@
 + (NSString *)formatDateForString:(NSDate *)formatDate;
 + (NSString*) howLongTimeAgoFromDate: (NSDate*)date;
 + (UIImage*) imageWithBlurredImageWithImage:(UIImage*)image withBlurRadius:(CGFloat)blurRadius;
-
-
++ (BOOL) userIsLogged;
++ (void) userIsLogged:(BOOL) value;
 @end

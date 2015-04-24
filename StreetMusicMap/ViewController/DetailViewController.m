@@ -29,6 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _isLogged = [Util userIsLogged];
+    
         self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoHeader"]];
  
     self.navigationController.view.backgroundColor =
@@ -45,9 +47,31 @@
     self.btnLike.layer.cornerRadius = 5;
     self.btnSendComment.layer.cornerRadius = 5;
     
+    if (_isLogged) {
+        self.viewComments.hidden = NO;
+        self.bottonConstraint.constant = 0;
+    } else {
+        self.viewComments.hidden = YES;
+        self.bottonConstraint.constant = -40;
+    }
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillBeHidden:) name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    _isLogged = [Util userIsLogged];
+
+    if (_isLogged) {
+        self.viewComments.hidden = NO;
+        self.bottonConstraint.constant = 0;
+    } else {
+        self.viewComments.hidden = YES;
+        self.bottonConstraint.constant = -40;
+    }
+    
     
 }
 
@@ -92,7 +116,35 @@
     }
     
 }
+- (IBAction)addLikeAction:(UIButton *)sender {
+    
+     [[InstagramEngine sharedEngine] likeMedia:_currentMedia.Id withSuccess:^{
+        
+         NSLog(@"Success like");
+         
+     } failure:^(NSError *error) {
+         
+         NSLog(@"Error like: %@", error);
 
+     }];
+}
+
+- (IBAction)sendCommentAction:(UIButton *)sender {
+    
+    
+    [[InstagramEngine sharedEngine] createComment:self.txtComment.text onMedia:_currentMedia.Id withSuccess:^{
+        
+         NSLog(@"Success comment");
+        
+        
+        
+    } failure:^(NSError *error) {
+        
+        NSLog(@"Error comment: %@", error);
+        
+    }];
+    
+}
 
 
 #pragma mark - Table view data source

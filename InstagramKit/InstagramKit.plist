@@ -5,7 +5,7 @@
 	<key>InstagramKitAppClientId</key>
 	<string>8878207a827f4f05a37f65965bac468a</string>
 	<key>InstagramKitAppRedirectURL</key>
-	<string>http://streetmusicmap.com</string>
+	<string>StreetMusicMap://</string>
 	<key>InstagramKitBaseUrl</key>
 	<string>https://api.instagram.com/v1/</string>
 	<key>InstagramKitAuthorizationUrl</key>

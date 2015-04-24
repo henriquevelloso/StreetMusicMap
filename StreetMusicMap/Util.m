@@ -7,6 +7,7 @@
 //
 
 #import "Util.h"
+#import "InstagramKit.h"
 
 @implementation Util
 
@@ -171,6 +172,32 @@
     
 }
 
+
++ (BOOL) userIsLogged {
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    NSString *logged = [prefs stringForKey:@"logged"];
+    if ([logged  isEqual: @"true"] && (![[[InstagramEngine sharedEngine] accessToken] isEqual: @""] || [[[InstagramEngine sharedEngine] accessToken] isEqual: nil]) ) {
+        return YES;
+    }
+    else {
+        return NO;
+    }
+    
+    
+}
+
++ (void) userIsLogged:(BOOL) value {
+    if (value) {
+    
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setObject:@"true" forKey:@"logged"];
+    }
+    else {
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setObject:@"false" forKey:@"logged"];
+    }
+}
 
 
 

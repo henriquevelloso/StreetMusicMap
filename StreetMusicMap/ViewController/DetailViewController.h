@@ -20,8 +20,12 @@
 @property (weak, nonatomic) IBOutlet UIView *viewComments;
 @property (weak, nonatomic) IBOutlet UIButton *btnLike;
 @property (weak, nonatomic) IBOutlet UIButton *btnSendComment;
+@property (weak, nonatomic) IBOutlet UITextField *txtComment;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintBottom;
 
+@property (nonatomic) BOOL isLogged;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottonConstraint;
 
 @end
