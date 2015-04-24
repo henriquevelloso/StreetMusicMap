@@ -10,29 +10,55 @@
 
 @interface MapViewController ()
 
+
+
 @end
+
+static BOOL allowLoad;
 
 @implementation MapViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-        self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoHeader"]];
+    
+    allowLoad = YES;
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoHeader"]];
+    
+    self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.webView.scrollView.bounces = NO;
+    self.webView.scrollView.scrollEnabled = NO;
+    [self.webView setDataDetectorTypes:UIDataDetectorTypeNone];
+    self.webView.contentMode = UIViewContentModeScaleAspectFit;
+    self.webView.delegate = self;
+    
+
+    NSURL *url = [NSURL URLWithString:@"https://www.google.com/maps/d/u/0/viewer?mid=z9Jdu3P1GTXQ.kVWJEkhIKftc"];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    [self.activeIndicator startAnimating];
+    self.activeIndicator.hidesWhenStopped = YES;
+    allowLoad = YES;
 }
-*/
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    [self.activeIndicator stopAnimating];
+    allowLoad = NO;
+    
+}
+
+- (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType {
+    return allowLoad;
+}
 
 @end

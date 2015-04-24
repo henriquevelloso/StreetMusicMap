@@ -20,23 +20,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="88A-FP-u8z">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuM-CG-vuq">
+                                <rect key="frame" x="0.0" y="-100" width="600" height="780"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="sCG-st-ONb"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cL2-ZJ-NxK">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="88A-FP-u8z" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="8LD-o6-kz1"/>
-                            <constraint firstItem="88A-FP-u8z" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="B6F-xf-eVI"/>
-                            <constraint firstAttribute="bottom" secondItem="88A-FP-u8z" secondAttribute="bottom" id="gQn-8o-pfS"/>
-                            <constraint firstAttribute="trailing" secondItem="88A-FP-u8z" secondAttribute="trailing" id="t6k-4F-KZP"/>
+                            <constraint firstAttribute="centerY" secondItem="cL2-ZJ-NxK" secondAttribute="centerY" id="ILb-SR-ihB"/>
+                            <constraint firstAttribute="trailing" secondItem="LuM-CG-vuq" secondAttribute="trailing" id="g6I-ZC-68D"/>
+                            <constraint firstItem="LuM-CG-vuq" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="-100" id="gIi-DS-BhP"/>
+                            <constraint firstAttribute="bottom" secondItem="LuM-CG-vuq" secondAttribute="bottom" constant="-80" id="kYa-y5-ww3"/>
+                            <constraint firstItem="LuM-CG-vuq" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="rzs-7s-Usu"/>
+                            <constraint firstAttribute="centerX" secondItem="cL2-ZJ-NxK" secondAttribute="centerX" id="yp3-Cd-ZZp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jc4-Vf-ruy"/>
+                    <connections>
+                        <outlet property="activeIndicator" destination="cL2-ZJ-NxK" id="969-zY-iPY"/>
+                        <outlet property="webView" destination="LuM-CG-vuq" id="sE7-66-hjT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-442" y="369"/>
+            <point key="canvasLocation" x="-400" y="445"/>
         </scene>
         <!--About View Controller-->
         <scene sceneID="GzS-Sg-Idm">
