@@ -15,6 +15,7 @@
 
 @interface VideoTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @property (weak, nonatomic) IBOutlet AsyncImageView *imgPostImage;
 @property (weak, nonatomic) IBOutlet UIButton *btnPlayArrow;

@@ -26,6 +26,7 @@
     [super viewDidLoad];
     
     _isLogged = [Util userIsLogged];
+    _activetyIndicator.hidden = YES;
     
     [self setupView];
     

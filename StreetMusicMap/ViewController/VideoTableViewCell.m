@@ -15,13 +15,12 @@
 - (void)awakeFromNib {
     
     self.viewVideoContent.hidden = YES;
-
-    
+     self.loader.hidden = YES;
+    self.activityIndicator.hidden = YES;
     
     // Initialization code
     // Subscribe to the AVPlayerItem's DidPlayToEndTime notification.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playMediaFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:_player];
-
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(failToPlay:) name:AVPlayerItemPlaybackStalledNotification object:_player];
 
     
@@ -38,7 +37,9 @@
     
     if (!_isPlaying && !_isVideoLoaded) {
         
-
+        self.activityIndicator.hidden = NO;
+        [self.activityIndicator startAnimating];
+        self.activityIndicator.hidesWhenStopped = YES;
         
         self.loader.animationImages = [NSArray arrayWithObjects:
                                        [UIImage imageNamed:@"loader00"],
@@ -70,7 +71,7 @@
         self.loader.alpha = 0.6f;
         [self.loader startAnimating];
         
-        
+        self.loader.hidden = YES;
         
         
         //self.viewVideoContent.hidden = NO;
@@ -121,10 +122,20 @@
     if (object == _player && [keyPath isEqualToString:@"status"]) {
         if (_player.status == AVPlayerStatusReadyToPlay) {
             self.viewVideoContent.hidden = NO;
+            
+            
+            self.activityIndicator.hidden = YES;
+            [self.activityIndicator stopAnimating];
+
+            
             [_player removeObserver:self forKeyPath:@"status" context:nil];
         } else if (_player.status == AVPlayerStatusFailed) {
+            
+            self.activityIndicator.hidden = YES;
+            [self.activityIndicator stopAnimating];
             [self performSelector:@selector(playVideo:) withObject:nil];
         }
+
     }
 }
 

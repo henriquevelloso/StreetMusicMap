@@ -100,26 +100,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-1i-zDu">
-                                <rect key="frame" x="16" y="713" width="284" height="30"/>
-                                <color key="backgroundColor" red="0.50044033480000005" green="0.84144176140000004" blue="0.077850034129999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="209" id="2xT-WI-UAF"/>
-                                    <constraint firstAttribute="width" constant="284" id="Fzc-Su-KGY"/>
-                                </constraints>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="2xT-WI-UAF"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="loginAction:" destination="Zvn-xL-0ZC" eventType="touchUpInside" id="psy-Bb-llu"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ILB-6o-la7">
                                 <rect key="frame" x="210" y="83" width="180" height="180"/>
                                 <constraints>
@@ -139,20 +119,57 @@
                                     <constraint firstAttribute="height" constant="20" id="C3r-FS-ViW"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOF-1i-zDu">
+                                <rect key="frame" x="16" y="375" width="568" height="50"/>
+                                <color key="backgroundColor" red="0.50044033480000005" green="0.84144176140000004" blue="0.077850034129999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="2xT-WI-UAF"/>
+                                    <constraint firstAttribute="width" constant="284" id="Fzc-Su-KGY"/>
+                                    <constraint firstAttribute="height" constant="50" id="eDM-Et-LH5"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2xT-WI-UAF"/>
+                                        <exclude reference="Fzc-Su-KGY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="loginAction:" destination="Zvn-xL-0ZC" eventType="touchUpInside" id="psy-Bb-llu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Bhi-qG-vm8" secondAttribute="centerX" id="43d-So-TNG"/>
                             <constraint firstItem="UfW-wt-GgK" firstAttribute="top" secondItem="MOF-1i-zDu" secondAttribute="bottom" constant="8" id="73R-MT-7AT"/>
+                            <constraint firstItem="MOF-1i-zDu" firstAttribute="trailing" secondItem="tcy-Cf-ATw" secondAttribute="trailingMargin" id="A9E-xh-xOY"/>
                             <constraint firstItem="Bhi-qG-vm8" firstAttribute="top" secondItem="sYv-d1-HT4" secondAttribute="bottom" constant="8" id="DY2-ag-0xl"/>
+                            <constraint firstAttribute="centerY" secondItem="MOF-1i-zDu" secondAttribute="centerY" id="Fjy-9b-fBp"/>
+                            <constraint firstItem="MOF-1i-zDu" firstAttribute="leading" secondItem="tcy-Cf-ATw" secondAttribute="leading" constant="16" id="Q8z-tc-V2q"/>
                             <constraint firstItem="sYv-d1-HT4" firstAttribute="trailing" secondItem="tcy-Cf-ATw" secondAttribute="trailingMargin" id="S6l-36-8uI"/>
                             <constraint firstItem="ILB-6o-la7" firstAttribute="top" secondItem="m87-mb-w07" secondAttribute="bottom" constant="19" id="VtR-AL-GL8"/>
                             <constraint firstItem="MOF-1i-zDu" firstAttribute="leading" secondItem="tcy-Cf-ATw" secondAttribute="leading" constant="16" id="dvM-7P-6XT"/>
                             <constraint firstItem="sYv-d1-HT4" firstAttribute="top" secondItem="ILB-6o-la7" secondAttribute="bottom" constant="8" id="eJL-1Z-iTx"/>
+                            <constraint firstAttribute="trailing" secondItem="MOF-1i-zDu" secondAttribute="trailing" constant="16" id="eaF-hO-u7L"/>
                             <constraint firstItem="sYv-d1-HT4" firstAttribute="leading" secondItem="tcy-Cf-ATw" secondAttribute="leadingMargin" id="pn1-c1-PKf"/>
+                            <constraint firstItem="MOF-1i-zDu" firstAttribute="trailing" secondItem="tcy-Cf-ATw" secondAttribute="trailingMargin" constant="16" id="qtB-n6-hE3"/>
                             <constraint firstAttribute="centerX" secondItem="ILB-6o-la7" secondAttribute="centerX" id="vIz-3l-1Pk"/>
+                            <constraint firstItem="MOF-1i-zDu" firstAttribute="leading" secondItem="tcy-Cf-ATw" secondAttribute="leadingMargin" constant="16" id="xHX-gS-Chx"/>
                             <constraint firstItem="ILB-6o-la7" firstAttribute="width" secondItem="tcy-Cf-ATw" secondAttribute="width" multiplier="0.3" id="xdu-OX-bjV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="A9E-xh-xOY"/>
+                                <exclude reference="dvM-7P-6XT"/>
+                                <exclude reference="qtB-n6-hE3"/>
+                                <exclude reference="xHX-gS-Chx"/>
+                                <exclude reference="73R-MT-7AT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Qq9-A8-ra5">
                         <barButtonItem key="rightBarButtonItem" title="Logoff" id="UTl-yu-92U">
@@ -644,7 +661,13 @@
                                                             <exclude reference="QaN-0E-6WH"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="playVideo:" destination="n5f-0L-nrJ" eventType="touchUpInside" id="EhM-BZ-FZR"/>
+                                                    </connections>
                                                 </button>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="APc-xo-io9">
+                                                    <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                                </activityIndicatorView>
                                             </subviews>
                                             <color key="backgroundColor" red="0.39825994320000002" green="0.39825994320000002" blue="0.39825994320000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -652,7 +675,9 @@
                                                 <constraint firstItem="Jf3-SK-EQf" firstAttribute="centerY" secondItem="JRa-KV-rkU" secondAttribute="centerY" id="1lH-wn-VvK"/>
                                                 <constraint firstItem="Jf3-SK-EQf" firstAttribute="width" secondItem="Jf3-SK-EQf" secondAttribute="height" multiplier="1:1" id="2EB-eY-Xbd"/>
                                                 <constraint firstItem="h0X-BD-4Ka" firstAttribute="top" secondItem="sfJ-Rw-xB6" secondAttribute="top" id="62y-6R-YXN"/>
+                                                <constraint firstItem="JRa-KV-rkU" firstAttribute="centerY" secondItem="APc-xo-io9" secondAttribute="centerY" id="CHC-JY-cZ8"/>
                                                 <constraint firstItem="DZ3-B3-GZ3" firstAttribute="top" secondItem="Jf3-SK-EQf" secondAttribute="bottom" constant="8" id="Htz-Vb-7r9"/>
+                                                <constraint firstItem="JRa-KV-rkU" firstAttribute="centerX" secondItem="APc-xo-io9" secondAttribute="centerX" id="Inz-RW-Z2M"/>
                                                 <constraint firstItem="h0X-BD-4Ka" firstAttribute="leading" secondItem="sfJ-Rw-xB6" secondAttribute="leading" id="NU4-e6-BZQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="Jf3-SK-EQf" secondAttribute="trailing" id="OdH-uJ-eo6"/>
                                                 <constraint firstItem="GdV-UC-6Sp" firstAttribute="trailing" secondItem="sfJ-Rw-xB6" secondAttribute="trailingMargin" id="RtN-A1-5Nl"/>
@@ -679,6 +704,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="activityIndicator" destination="APc-xo-io9" id="gXq-4U-oCx"/>
                                             <outlet property="btnPlayArrow" destination="JRa-KV-rkU" id="Trr-DQ-SFN"/>
                                             <outlet property="imgPostImage" destination="Jf3-SK-EQf" id="qdI-ca-SWL"/>
                                             <outlet property="lblDescription" destination="GdV-UC-6Sp" id="rMm-JL-fVf"/>

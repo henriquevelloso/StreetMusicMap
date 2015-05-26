@@ -80,8 +80,8 @@
             NSString *haystack = _caption.text;
         
         
-            NSRange rangeEp = [haystack.lowercaseString rangeOfString:@"streetmusicmap ep."];
-            NSString *episode = [haystack substringWithRange:NSMakeRange(rangeEp.location + 18, 4)];
+            NSRange rangeEp = [haystack.lowercaseString rangeOfString:@" ep."];
+            NSString *episode = [haystack substringWithRange:NSMakeRange(rangeEp.location + 4, 4)];
             _episode = [episode stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         
         
