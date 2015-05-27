@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -271,7 +271,6 @@
                         <segue destination="Q5e-0i-pEt" kind="relationship" relationship="viewControllers" id="fte-T1-Jjv"/>
                         <segue destination="GvK-GS-1dj" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="7RW-uJ-uee" kind="relationship" relationship="viewControllers" id="GMq-wd-0U3"/>
-                        <segue destination="xlh-2V-sxF" kind="relationship" relationship="viewControllers" id="OKh-ww-pC5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -492,7 +491,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bxS-s3-6c8"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="JzQ-Yj-vJa">
-                        <rect key="frame" x="0.0" y="64" width="600" height="1036"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1036"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isD-ia-zhI" userLabel="Comment View">
@@ -600,7 +599,7 @@
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parque da Redenção - Porto Alegre" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="X5D-Ju-cNQ">
-                                                    <rect key="frame" x="36" y="608" width="214" height="26"/>
+                                                    <rect key="frame" x="36" y="608" width="556" height="26"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="0S5-zD-ygQ"/>
                                                         <constraint firstAttribute="height" constant="26" id="XOb-CM-Ycp"/>
@@ -678,6 +677,7 @@
                                                 <constraint firstItem="JRa-KV-rkU" firstAttribute="centerY" secondItem="APc-xo-io9" secondAttribute="centerY" id="CHC-JY-cZ8"/>
                                                 <constraint firstItem="DZ3-B3-GZ3" firstAttribute="top" secondItem="Jf3-SK-EQf" secondAttribute="bottom" constant="8" id="Htz-Vb-7r9"/>
                                                 <constraint firstItem="JRa-KV-rkU" firstAttribute="centerX" secondItem="APc-xo-io9" secondAttribute="centerX" id="Inz-RW-Z2M"/>
+                                                <constraint firstItem="X5D-Ju-cNQ" firstAttribute="trailing" secondItem="sfJ-Rw-xB6" secondAttribute="trailingMargin" id="Lob-ln-FF7"/>
                                                 <constraint firstItem="h0X-BD-4Ka" firstAttribute="leading" secondItem="sfJ-Rw-xB6" secondAttribute="leading" id="NU4-e6-BZQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="Jf3-SK-EQf" secondAttribute="trailing" id="OdH-uJ-eo6"/>
                                                 <constraint firstItem="GdV-UC-6Sp" firstAttribute="trailing" secondItem="sfJ-Rw-xB6" secondAttribute="trailingMargin" id="RtN-A1-5Nl"/>
@@ -781,12 +781,16 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dwt-Tq-S6T">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="yVh-n4-120"/>
+                    </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1100"/>
                     <connections>
                         <outlet property="TableViewDetail" destination="sCL-Cv-cZ7" id="1vM-nS-H9O"/>
                         <outlet property="bottonConstraint" destination="62l-W6-bIr" id="S8o-AC-8Zg"/>
+                        <outlet property="btnLaunchInstagram" destination="yVh-n4-120" id="bKr-2x-p4u"/>
                         <outlet property="btnLike" destination="rOB-ub-edg" id="vnB-lQ-JvZ"/>
                         <outlet property="btnSendComment" destination="Sb8-dj-4iG" id="fhC-9o-nRL"/>
                         <outlet property="constraintBottom" destination="j1S-vI-kYb" id="Dsr-U7-Qrn"/>

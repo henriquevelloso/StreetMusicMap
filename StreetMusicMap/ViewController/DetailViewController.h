@@ -12,6 +12,7 @@
 
 
 @interface DetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *btnLaunchInstagram;
 
 @property (strong, nonatomic) InstagramMedia *currentMedia;
 

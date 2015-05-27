@@ -75,8 +75,7 @@
         if (IKNotNull(info[kLocation])) {
             _location = CLLocationCoordinate2DMake([(info[kLocation])[kLatitude] doubleValue], [(info[kLocation])[kLongitude] doubleValue]);
         }
-        
-        
+    
             NSString *haystack = _caption.text;
         
         

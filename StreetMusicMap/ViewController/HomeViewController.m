@@ -35,14 +35,14 @@
     self.tabBarItem.imageInsets = UIEdgeInsetsMake(-16, 0, 0, -10);
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(loadData:) forControlEvents:UIControlEventValueChanged];
+    [refreshControl addTarget:self action:@selector(loadDataRefresh:) forControlEvents:UIControlEventValueChanged];
     [self.tableView addSubview:refreshControl];
     
     [self loadData:refreshControl];
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoHeader"]];
     
-
+    
 }
 
 - (void)updateTableView:(UIRefreshControl *)refreshControl {
@@ -62,9 +62,20 @@
 #pragma mark Custom Methods
 
 
-
-
 - (void)loadData:(UIRefreshControl *)refreshControl {
+    
+    [self loadData:refreshControl refresh:NO];
+}
+
+- (void)loadDataRefresh:(UIRefreshControl *)refreshControl {
+    
+    [self loadData:refreshControl refresh:YES];
+}
+
+
+
+
+- (void)loadData:(UIRefreshControl *)refreshControl refresh:(BOOL)refreshValue {
     
     NSString *userID = @"1028760904";
     
@@ -75,31 +86,49 @@
     }
     
     
-    [sharedEngine getMediaForUser:userID
-                            count:4
-                            maxId:self.currentPaginationInfo.nextMaxId
-                      withSuccess:^(NSArray *media, InstagramPaginationInfo *paginationInfo)
-     {
-         
-         if (paginationInfo) {
-             self.currentPaginationInfo = paginationInfo;
-         }
-         for (InstagramMedia *item in media) {
+    if (refreshValue) {
+        
+        [sharedEngine getMediaForUser:userID count:4 maxId:nil withSuccess:^(NSArray *media, InstagramPaginationInfo *paginationInfo) {
+            
+            self.currentPaginationInfo = paginationInfo;
+            postArray = [[NSMutableArray alloc] init];
+            postArray = [media mutableCopy];
+            
+            [self performSelectorOnMainThread:@selector(updateTableView:) withObject:refreshControl waitUntilDone:NO];
+
+            
+        } failure:^(NSError *error) {
+            
+            
+        }];
+        
+    } else {
+        [sharedEngine getMediaForUser:userID
+                                count:4
+                                maxId:self.currentPaginationInfo.nextMaxId
+                          withSuccess:^(NSArray *media, InstagramPaginationInfo *paginationInfo)
+         {
              
-             if (![postArray containsObject:item]) {
-                 [postArray addObject:item];
+             if (paginationInfo) {
+                 self.currentPaginationInfo = paginationInfo;
+             }
+             for (InstagramMedia *item in media) {
+                 
+                 if (![postArray containsObject:item]) {
+                     [postArray addObject:item];
+                 }
+                 
              }
              
-         }
-         
-         [self performSelectorOnMainThread:@selector(updateTableView:) withObject:refreshControl waitUntilDone:NO];
-
-         //[self.tableView reloadData];
-         
-     } failure:^(NSError *error) {
-         
-         
-     }];
+             [self performSelectorOnMainThread:@selector(updateTableView:) withObject:refreshControl waitUntilDone:NO];
+             
+             //[self.tableView reloadData];
+             
+         } failure:^(NSError *error) {
+             
+             
+         }];
+    }
     
 }
 
