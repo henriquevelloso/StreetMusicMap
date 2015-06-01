@@ -28,6 +28,9 @@
     // Do any additional setup after loading the view.
     
     
+
+    
+    
     self.navigationController.view.backgroundColor =
     [UIColor colorWithPatternImage: [UIImage imageNamed:@"Default"]];
     self.tableView.backgroundColor = [UIColor clearColor];
@@ -35,14 +38,31 @@
     self.tabBarItem.imageInsets = UIEdgeInsetsMake(-16, 0, 0, -10);
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [refreshControl setTintColor:[UIColor whiteColor]];
+    
+    
     [refreshControl addTarget:self action:@selector(loadDataRefresh:) forControlEvents:UIControlEventValueChanged];
+
+    
     [self.tableView addSubview:refreshControl];
+    
+    if(self.tableView.contentOffset.y == 0){
+        self.tableView.contentOffset = CGPointMake(0, - refreshControl.frame.size.height);
+        [refreshControl beginRefreshing];
+    }
+    
+    
     
     [self loadData:refreshControl];
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoHeader"]];
     
     
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    [self updateTableView:[[UIRefreshControl alloc] init]];
+
 }
 
 - (void)updateTableView:(UIRefreshControl *)refreshControl {

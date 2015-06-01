@@ -17,7 +17,7 @@
 
 
     CGFloat _initialConstant;
-
+    NSString *linkToInstagram;
 }
 
 @end
@@ -28,6 +28,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSRange rangeID = [_currentMedia.Id rangeOfString:@"_"];
+    NSString *idParcial = [_currentMedia.Id substringWithRange:NSMakeRange(0, rangeID.location)];
+    linkToInstagram = [@"instagram://media?id=" stringByAppendingString:idParcial];
+    
     
     _isLogged = [Util userIsLogged];
     
@@ -101,6 +106,16 @@
         // This method will automatically animate all views to satisfy new constants.
         [self.view layoutIfNeeded];
     }];
+    
+}
+- (IBAction)linkToInstagram:(id)sender {
+    
+   // linkToInstagram
+    
+    NSString *customURL = linkToInstagram;
+    
+
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:customURL]];
     
 }
 
