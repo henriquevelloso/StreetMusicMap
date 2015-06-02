@@ -14,7 +14,6 @@
 
 @end
 
-static BOOL allowLoad;
 
 @implementation MapViewController
 
@@ -22,43 +21,73 @@ static BOOL allowLoad;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    allowLoad = YES;
+    locationManager = [[CLLocationManager alloc] init];
+    
+     [locationManager requestWhenInUseAuthorization];
+    self.mapView.delegate = self;
+    locationManager.delegate = self;
+   
+    
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LogoHeader"]];
     
-    self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    self.webView.scrollView.bounces = NO;
-    self.webView.scrollView.scrollEnabled = NO;
-    [self.webView setDataDetectorTypes:UIDataDetectorTypeNone];
-    self.webView.contentMode = UIViewContentModeScaleAspectFit;
-    self.webView.delegate = self;
+    self.mapView.rotateEnabled = NO;
+    self.mapView.scrollEnabled = NO;
+    self.mapView.zoomEnabled = NO;
     
+    
+    [self.loader startAnimating];
+    [self performSelectorInBackground:@selector(addPinsOnMap) withObject:nil];
 
-    NSURL *url = [NSURL URLWithString:@"https://www.google.com/maps/d/u/0/viewer?mid=z9Jdu3P1GTXQ.kVWJEkhIKftc"];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
+-(void) addPinsOnMap {
+    
+    //MAP
+    
+    // Locate the path to the route.kml file in the application's bundle
+    // and parse it with the KMLParser.
+    // NSString *path = [[NSBundle mainBundle] pathForResource:@"StreetMusicMap" ofType:@"kml"];
+    NSURL *urlKML = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/2788733/StreetMusicMap.kml"];
+    kmlParser = [[KMLParser alloc] initWithURL:urlKML];
+    [kmlParser parseKML];
+    
+    
+    
+    // Add all of the MKAnnotation objects parsed from the KML file to the map.
+    NSArray *annotations = [kmlParser points];
+    [self.mapView addAnnotations:annotations];
+    
+    
+    [self.loader stopAnimating];
+    self.mapView.rotateEnabled = YES;
+    self.mapView.scrollEnabled = YES;
+    self.mapView.zoomEnabled = YES;
+    
+  //  [self.mapView reloadInputViews];
+    [locationManager startUpdatingLocation];
+}
+
+-(void) locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse ) {
+        self.mapView.showsUserLocation = YES;
+
+        [self.mapView setCenterCoordinate:locationManager.location.coordinate]; //CLLocationCoordinate2DMake(0, 0)]; //
+        self.mapView.camera.altitude = pow( 4.2, 11);
+    }
     
 }
 
+-(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
 
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
-    
+    [locationManager stopUpdatingLocation];
+    [self.mapView setCenterCoordinate:locationManager.location.coordinate animated:YES];
+    self.mapView.camera.altitude = pow( 4.19, 11);
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView{
-    [self.activeIndicator startAnimating];
-    self.activeIndicator.hidesWhenStopped = YES;
-    allowLoad = YES;
-}
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-    [self.activeIndicator stopAnimating];
-    allowLoad = NO;
-    
-}
 
-- (BOOL)webView:(UIWebView*)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType {
-    return allowLoad;
-}
+
+
 
 @end

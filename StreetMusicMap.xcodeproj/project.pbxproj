@@ -48,6 +48,9 @@
 		C571FDC71AC0BD4A00652942 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDC51AC0BD3500652942 /* QuartzCore.framework */; };
 		C571FDCC1AC20B8F00652942 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDCB1AC20B8F00652942 /* MediaPlayer.framework */; };
 		C571FDCE1AC20FF100652942 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDCD1AC20FF100652942 /* AVFoundation.framework */; };
+		C59D36151B1E47C300965C32 /* KMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D36141B1E47C300965C32 /* KMLParser.m */; };
+		C59D36171B1E48DB00965C32 /* StreetMusicMap.kml in Resources */ = {isa = PBXBuildFile; fileRef = C59D36161B1E48DB00965C32 /* StreetMusicMap.kml */; };
+		C59D36181B1E48F700965C32 /* StreetMusicMap.kml in Sources */ = {isa = PBXBuildFile; fileRef = C59D36161B1E48DB00965C32 /* StreetMusicMap.kml */; };
 		C5C77DA21AC4916E00FF62D2 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C77DA11AC4916E00FF62D2 /* Util.m */; };
 		C5C77DA51AC4CA7400FF62D2 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C77DA41AC4CA7400FF62D2 /* ConfigViewController.m */; };
 		C5C77DA81AC4D3E000FF62D2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C77DA71AC4D3E000FF62D2 /* Images.xcassets */; };
@@ -183,6 +186,9 @@
 		C571FDC51AC0BD3500652942 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C571FDCB1AC20B8F00652942 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C571FDCD1AC20FF100652942 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C59D36131B1E47C300965C32 /* KMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMLParser.h; sourceTree = "<group>"; };
+		C59D36141B1E47C300965C32 /* KMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMLParser.m; sourceTree = "<group>"; };
+		C59D36161B1E48DB00965C32 /* StreetMusicMap.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StreetMusicMap.kml; sourceTree = "<group>"; };
 		C5C77DA01AC4916E00FF62D2 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		C5C77DA11AC4916E00FF62D2 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		C5C77DA31AC4CA7400FF62D2 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigViewController.h; path = ViewController/ConfigViewController.h; sourceTree = "<group>"; };
@@ -496,6 +502,9 @@
 		C5C77D9F1AC47DC700FF62D2 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				C59D36161B1E48DB00965C32 /* StreetMusicMap.kml */,
+				C59D36131B1E47C300965C32 /* KMLParser.h */,
+				C59D36141B1E47C300965C32 /* KMLParser.m */,
 				C55616491AC07E5A004A4805 /* MapViewController.h */,
 				C556164A1AC07E5A004A4805 /* MapViewController.m */,
 			);
@@ -687,6 +696,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59D36171B1E48DB00965C32 /* StreetMusicMap.kml in Resources */,
 				C5FF0CC51AC84BF700114BA1 /* loader20.png in Resources */,
 				C5FF0CB41AC84BF700114BA1 /* loader03.png in Resources */,
 				C5FF0CB31AC84BF700114BA1 /* loader02.png in Resources */,
@@ -733,6 +743,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59D36181B1E48F700965C32 /* StreetMusicMap.kml in Sources */,
 				C571FD8E1AC09BC400652942 /* InstagramPaginationInfo.m in Sources */,
 				C571FD8A1AC09BC400652942 /* IKUserInPhoto.m in Sources */,
 				C5FF0D011AC8672900114BA1 /* UIView+WebCacheOperation.m in Sources */,
@@ -770,6 +781,7 @@
 				C556164B1AC07E5A004A4805 /* MapViewController.m in Sources */,
 				C5FF0CFE1AC8672900114BA1 /* UIImage+MultiFormat.m in Sources */,
 				C5FF0D311AC9B6D300114BA1 /* DetailViewController.m in Sources */,
+				C59D36151B1E47C300965C32 /* KMLParser.m in Sources */,
 				C5FF0CD01AC8643A00114BA1 /* UIImageView+UIActivityIndicatorForSDWebImage.m in Sources */,
 				C5C77DA51AC4CA7400FF62D2 /* ConfigViewController.m in Sources */,
 				C5FF0CF41AC8672900114BA1 /* NSData+ImageContentType.m in Sources */,

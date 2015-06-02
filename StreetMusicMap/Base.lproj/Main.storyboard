@@ -20,32 +20,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuM-CG-vuq">
-                                <rect key="frame" x="0.0" y="-100" width="600" height="780"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfI-FD-KDi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <connections>
-                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="sCG-st-ONb"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="n2f-eF-QnV"/>
                                 </connections>
-                            </webView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cL2-ZJ-NxK">
+                            </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cL2-ZJ-NxK">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hfI-FD-KDi" firstAttribute="top" secondItem="cL2-ZJ-NxK" secondAttribute="bottom" constant="8" id="9Ds-Z1-TaD"/>
                             <constraint firstAttribute="centerY" secondItem="cL2-ZJ-NxK" secondAttribute="centerY" id="ILb-SR-ihB"/>
-                            <constraint firstAttribute="trailing" secondItem="LuM-CG-vuq" secondAttribute="trailing" id="g6I-ZC-68D"/>
-                            <constraint firstItem="LuM-CG-vuq" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="-100" id="gIi-DS-BhP"/>
-                            <constraint firstAttribute="bottom" secondItem="LuM-CG-vuq" secondAttribute="bottom" constant="-80" id="kYa-y5-ww3"/>
-                            <constraint firstItem="LuM-CG-vuq" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="rzs-7s-Usu"/>
+                            <constraint firstItem="hfI-FD-KDi" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" id="UhR-gR-ojf"/>
+                            <constraint firstItem="hfI-FD-KDi" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="pb5-er-jLv"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="hfI-FD-KDi" secondAttribute="bottom" id="r9W-XQ-5xN"/>
+                            <constraint firstAttribute="trailing" secondItem="hfI-FD-KDi" secondAttribute="trailing" id="xbN-GO-PS6"/>
                             <constraint firstAttribute="centerX" secondItem="cL2-ZJ-NxK" secondAttribute="centerX" id="yp3-Cd-ZZp"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9Ds-Z1-TaD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="jc4-Vf-ruy"/>
                     <connections>
                         <outlet property="activeIndicator" destination="cL2-ZJ-NxK" id="969-zY-iPY"/>
-                        <outlet property="webView" destination="LuM-CG-vuq" id="sE7-66-hjT"/>
+                        <outlet property="loader" destination="cL2-ZJ-NxK" id="Azy-ed-k0f"/>
+                        <outlet property="mapView" destination="hfI-FD-KDi" id="wIb-Pg-sun"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
