@@ -36,6 +36,17 @@
     
     
     [self.loader startAnimating];
+    
+     NSString *path = [[NSBundle mainBundle] pathForResource:@"StreetMusicMap" ofType:@"kml"];
+    NSURL *urlKML = [NSURL fileURLWithPath:path];
+    kmlParser = [[KMLParser alloc] initWithURL:urlKML];
+    [kmlParser parseKML];
+    
+    // Add all of the MKAnnotation objects parsed from the KML file to the map.
+    NSArray *annotations = [kmlParser points];
+    [self.mapView addAnnotations:annotations];
+
+    
     [self performSelectorInBackground:@selector(addPinsOnMap) withObject:nil];
 
 }
@@ -51,6 +62,11 @@
     kmlParser = [[KMLParser alloc] initWithURL:urlKML];
     [kmlParser parseKML];
     
+    
+//remove all
+    NSMutableArray * annotationsToRemove = [self.mapView.annotations mutableCopy];
+    [annotationsToRemove removeObject:self.mapView.userLocation];
+    [self.mapView removeAnnotations:annotationsToRemove];
     
     
     // Add all of the MKAnnotation objects parsed from the KML file to the map.

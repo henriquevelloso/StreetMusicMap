@@ -57,41 +57,155 @@
             </objects>
             <point key="canvasLocation" x="-400" y="445"/>
         </scene>
-        <!--About View Controller-->
-        <scene sceneID="GzS-Sg-Idm">
+        <!--About Table View Controller-->
+        <scene sceneID="cc5-Mq-SA8">
             <objects>
-                <viewController id="jkF-1m-LWz" customClass="AboutViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KwG-U0-Un9"/>
-                        <viewControllerLayoutGuide type="bottom" id="qVR-zS-e6Z"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bab-us-PRi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController id="all-Db-aMJ" customClass="AboutTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="1010" sectionHeaderHeight="22" sectionFooterHeight="22" id="82H-Ti-Pij">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobre o app e demais infos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPe-aZ-FUa">
-                                <rect key="frame" x="16" y="289" width="568" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="YAo-hA-VDe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="yPe-aZ-FUa" firstAttribute="leading" secondItem="bab-us-PRi" secondAttribute="leadingMargin" id="I3r-rX-eLK"/>
-                            <constraint firstAttribute="centerY" secondItem="yPe-aZ-FUa" secondAttribute="centerY" id="Pf6-Pg-2In"/>
-                            <constraint firstItem="yPe-aZ-FUa" firstAttribute="trailing" secondItem="bab-us-PRi" secondAttribute="trailingMargin" id="fNV-8L-t8A"/>
-                            <constraint firstAttribute="centerX" secondItem="yPe-aZ-FUa" secondAttribute="centerX" id="tuB-vy-Kba"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="4Fn-zo-KuG"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LHQ-k9-DSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="826" id="qfv-BM-tk1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qfv-BM-tk1" id="v6s-ls-96o">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHO WE ARE" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spl-nd-p0z">
+                                            <rect key="frame" x="8" y="16" width="584" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.92819506123935414" green="0.92701735552719611" blue="0.94758894083232326" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APC-nM-KQf">
+                                            <rect key="frame" x="8" y="39" width="584" height="59.5"/>
+                                            <string key="text">StreetMusicMap is a collab line up of street music performers from all over the world. StreetMusicMap é um line up colaborativo de músicos de rua do mundo inteiro.</string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.92819506123935414" green="0.92701735552719611" blue="0.94758894083232326" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHAT WE WANT" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ly-NP-ARj">
+                                            <rect key="frame" x="8" y="130" width="584" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.92819506123935414" green="0.92701735552719611" blue="0.94758894083232326" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hr-2f-W4F">
+                                            <rect key="frame" x="8" y="153" width="584" height="59.5"/>
+                                            <string key="text">To develop a world community which connects street artists, fans and filmmakers. The StreetMusicMap project intends to explore different platforms, such as Instagram, Facebook, YouTube, TV and Google Maps. </string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.92819506123935414" green="0.92701735552719611" blue="0.94758894083232326" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW IT WORKS" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmZ-5x-Tap">
+                                            <rect key="frame" x="8" y="245" width="584" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.92819506123935414" green="0.92701735552719611" blue="0.94758894083232326" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bga-Kw-5sX">
+                                            <rect key="frame" x="8" y="268" width="584" height="119"/>
+                                            <string key="text">Be part of StreetMusicMap sending a 15s video of your favorite street artist to streetmusicmap@gmail.com or hashtag your video on social networks as #streetmusicmap. 
+Don't forget to identify the artist, the venue/street/city and the filmmaker (specially their social network accounts, such as Instagram, Twitter, Facebook and the artists' official site or email). </string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.92819506123935414" green="0.92701735552719611" blue="0.94758894083232326" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBJ-6T-QuK">
+                                            <rect key="frame" x="8" y="419" width="584" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.92819506123935414" green="0.92701735552719611" blue="0.94758894083232326" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pth-ZL-uAf">
+                                            <rect key="frame" x="8" y="443" width="584" height="298"/>
+                                            <string key="text">Daniel Bacchieri 
+Founder and Curator 
+danielbacchieri@gmail.com 
+
+Teodoro Marques 
+Designer 
+teo.tmd@gmail.com 
+
+Gustavo Mayer 
+Technology 
+gustavo@trin.ca
+
+Henrique Velloso
+Mobile
+velloso@trin.ca</string>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" red="0.92819506123935414" green="0.92701735552719611" blue="0.94758894083232326" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaW-1J-Jro">
+                                            <rect key="frame" x="8" y="768" width="584" height="50"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="4b6-SX-B8p"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                            <state key="normal" title="CONTACT US">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="sendMailAction:" destination="all-Db-aMJ" eventType="touchUpInside" id="YJr-Pn-hI5"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Pth-ZL-uAf" firstAttribute="leading" secondItem="v6s-ls-96o" secondAttribute="leadingMargin" id="086-as-raE"/>
+                                        <constraint firstItem="RmZ-5x-Tap" firstAttribute="top" secondItem="3hr-2f-W4F" secondAttribute="bottom" constant="32" id="1Q1-h7-EZF"/>
+                                        <constraint firstItem="5Ly-NP-ARj" firstAttribute="leading" secondItem="v6s-ls-96o" secondAttribute="leadingMargin" id="4T9-Pn-Zzs"/>
+                                        <constraint firstItem="Pth-ZL-uAf" firstAttribute="top" secondItem="JBJ-6T-QuK" secondAttribute="bottom" constant="3" id="54k-7H-SOI"/>
+                                        <constraint firstItem="APC-nM-KQf" firstAttribute="leading" secondItem="v6s-ls-96o" secondAttribute="leadingMargin" id="57I-TQ-b73"/>
+                                        <constraint firstItem="CaW-1J-Jro" firstAttribute="leading" secondItem="v6s-ls-96o" secondAttribute="leadingMargin" id="69C-rV-NbL"/>
+                                        <constraint firstItem="3hr-2f-W4F" firstAttribute="top" secondItem="5Ly-NP-ARj" secondAttribute="bottom" constant="3" id="9NT-I3-zPq"/>
+                                        <constraint firstItem="RmZ-5x-Tap" firstAttribute="leading" secondItem="v6s-ls-96o" secondAttribute="leadingMargin" id="DGf-Ex-PLO"/>
+                                        <constraint firstItem="RmZ-5x-Tap" firstAttribute="trailing" secondItem="v6s-ls-96o" secondAttribute="trailingMargin" id="EGb-Cu-9NR"/>
+                                        <constraint firstItem="3hr-2f-W4F" firstAttribute="leading" secondItem="v6s-ls-96o" secondAttribute="leadingMargin" id="I4t-nt-7TF"/>
+                                        <constraint firstItem="CaW-1J-Jro" firstAttribute="trailing" secondItem="v6s-ls-96o" secondAttribute="trailingMargin" id="IU9-D7-g4j"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="3hr-2f-W4F" secondAttribute="trailing" id="Lz0-LK-kRP"/>
+                                        <constraint firstItem="JBJ-6T-QuK" firstAttribute="leading" secondItem="v6s-ls-96o" secondAttribute="leadingMargin" id="NqZ-pX-aQX"/>
+                                        <constraint firstItem="3hr-2f-W4F" firstAttribute="top" secondItem="5Ly-NP-ARj" secondAttribute="bottom" constant="3" id="NvS-e7-OVJ"/>
+                                        <constraint firstItem="spl-nd-p0z" firstAttribute="top" secondItem="v6s-ls-96o" secondAttribute="topMargin" constant="8" id="PQ6-5s-sWp"/>
+                                        <constraint firstItem="spl-nd-p0z" firstAttribute="leading" secondItem="v6s-ls-96o" secondAttribute="leadingMargin" id="QKB-0N-4gJ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bga-Kw-5sX" secondAttribute="trailing" id="VrU-Jd-nfJ"/>
+                                        <constraint firstItem="bga-Kw-5sX" firstAttribute="leading" secondItem="v6s-ls-96o" secondAttribute="leadingMargin" id="WOG-Gv-HGr"/>
+                                        <constraint firstItem="5Ly-NP-ARj" firstAttribute="trailing" secondItem="v6s-ls-96o" secondAttribute="trailingMargin" id="Wdz-x8-S27"/>
+                                        <constraint firstItem="JBJ-6T-QuK" firstAttribute="trailing" secondItem="v6s-ls-96o" secondAttribute="trailingMargin" id="XfS-ei-F9q"/>
+                                        <constraint firstItem="JBJ-6T-QuK" firstAttribute="top" secondItem="bga-Kw-5sX" secondAttribute="bottom" constant="32" id="a4d-NY-7uo"/>
+                                        <constraint firstItem="bga-Kw-5sX" firstAttribute="top" secondItem="RmZ-5x-Tap" secondAttribute="bottom" constant="3" id="gvZ-vr-fux"/>
+                                        <constraint firstItem="APC-nM-KQf" firstAttribute="top" secondItem="spl-nd-p0z" secondAttribute="bottom" constant="3" id="m6a-Pl-afD"/>
+                                        <constraint firstItem="5Ly-NP-ARj" firstAttribute="top" secondItem="APC-nM-KQf" secondAttribute="bottom" constant="32" id="mGS-jM-ukh"/>
+                                        <constraint firstItem="Pth-ZL-uAf" firstAttribute="trailing" secondItem="v6s-ls-96o" secondAttribute="trailingMargin" id="t91-uX-DW0"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="spl-nd-p0z" secondAttribute="trailing" id="vF2-y0-7bG"/>
+                                        <constraint firstItem="CaW-1J-Jro" firstAttribute="top" secondItem="Pth-ZL-uAf" secondAttribute="bottom" constant="27" id="vux-Al-686"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="APC-nM-KQf" secondAttribute="trailing" id="yEb-pm-uhJ"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="9NT-I3-zPq"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="all-Db-aMJ" id="bQe-Vh-DbE"/>
+                            <outlet property="delegate" destination="all-Db-aMJ" id="DAg-0B-qFv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="H6H-Xw-pOx"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="2000"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dji-Kd-J9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484" y="369"/>
+            <point key="canvasLocation" x="1384" y="381"/>
         </scene>
         <!--Config View Controller-->
         <scene sceneID="dXm-8J-6Db">
@@ -196,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ne6-iN-DSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="369"/>
+            <point key="canvasLocation" x="2184" y="369"/>
         </scene>
         <!--Login Web View View Controller-->
         <scene sceneID="lut-vv-rL7">
@@ -259,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIg-DU-hz5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2202" y="369"/>
+            <point key="canvasLocation" x="3014" y="369"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -275,12 +389,12 @@
                     <connections>
                         <segue destination="Q5e-0i-pEt" kind="relationship" relationship="viewControllers" id="fte-T1-Jjv"/>
                         <segue destination="GvK-GS-1dj" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="7RW-uJ-uee" kind="relationship" relationship="viewControllers" id="GMq-wd-0U3"/>
+                        <segue destination="IZf-1K-uKG" kind="relationship" relationship="viewControllers" id="Xwh-ht-F4e"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-76" y="-1248"/>
+            <point key="canvasLocation" x="-52" y="-1248"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Mlm-Tv-jXT">
@@ -499,6 +613,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1036"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default" translatesAutoresizingMaskIntoConstraints="NO" id="cWJ-pT-t2i">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="1036"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isD-ia-zhI" userLabel="Comment View">
                                 <rect key="frame" x="0.0" y="996" width="600" height="40"/>
                                 <subviews>
@@ -777,12 +894,28 @@
                         <constraints>
                             <constraint firstItem="isD-ia-zhI" firstAttribute="top" secondItem="sCL-Cv-cZ7" secondAttribute="bottom" id="62l-W6-bIr"/>
                             <constraint firstItem="sCL-Cv-cZ7" firstAttribute="top" secondItem="JzQ-Yj-vJa" secondAttribute="top" id="Ckj-ZT-0s2"/>
+                            <constraint firstAttribute="centerY" secondItem="cWJ-pT-t2i" secondAttribute="centerY" id="Cv1-TH-W5J"/>
                             <constraint firstItem="isD-ia-zhI" firstAttribute="leading" secondItem="JzQ-Yj-vJa" secondAttribute="leading" id="G35-06-G6Q"/>
+                            <constraint firstItem="cWJ-pT-t2i" firstAttribute="top" secondItem="rL5-p2-QNL" secondAttribute="bottom" id="KRl-2H-QCB"/>
                             <constraint firstItem="sCL-Cv-cZ7" firstAttribute="leading" secondItem="JzQ-Yj-vJa" secondAttribute="leading" id="Ljy-9N-C89"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cWJ-pT-t2i" secondAttribute="trailing" id="SpY-NR-Va8"/>
+                            <constraint firstAttribute="centerX" secondItem="cWJ-pT-t2i" secondAttribute="centerX" id="Xi8-Tq-VXF"/>
                             <constraint firstAttribute="trailing" secondItem="isD-ia-zhI" secondAttribute="trailing" id="YLd-on-GWy"/>
                             <constraint firstAttribute="trailing" secondItem="sCL-Cv-cZ7" secondAttribute="trailing" id="Zg9-da-CLr"/>
+                            <constraint firstItem="cWJ-pT-t2i" firstAttribute="leading" secondItem="JzQ-Yj-vJa" secondAttribute="leadingMargin" id="cSO-vR-jQd"/>
+                            <constraint firstAttribute="width" secondItem="cWJ-pT-t2i" secondAttribute="width" id="deK-O9-1Bl"/>
                             <constraint firstItem="bxS-s3-6c8" firstAttribute="bottom" secondItem="isD-ia-zhI" secondAttribute="bottom" id="j1S-vI-kYb"/>
+                            <constraint firstAttribute="height" secondItem="cWJ-pT-t2i" secondAttribute="height" id="sjg-mV-Q3Y"/>
+                            <constraint firstItem="bxS-s3-6c8" firstAttribute="top" secondItem="cWJ-pT-t2i" secondAttribute="bottom" id="yX3-kf-4Nr"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="KRl-2H-QCB"/>
+                                <exclude reference="SpY-NR-Va8"/>
+                                <exclude reference="cSO-vR-jQd"/>
+                                <exclude reference="yX3-kf-4Nr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
@@ -809,7 +942,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jSa-Rc-VBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2194" y="-970"/>
+            <point key="canvasLocation" x="3006" y="-970"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZrD-vw-OCt">
@@ -856,28 +989,6 @@
             <point key="canvasLocation" x="-442" y="-401"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="BpV-8y-Ba7">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7RW-uJ-uee" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="aboutMenu" id="8QY-3R-jkc">
-                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="6Hc-d3-Zi0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jkF-1m-LWz" kind="relationship" relationship="rootViewController" id="xok-7v-9Vh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dBY-3C-Mce" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="484" y="-401"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="UFO-Ji-04q">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xlh-2V-sxF" sceneMemberID="viewController">
@@ -897,10 +1008,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXp-8v-c4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="-401"/>
+            <point key="canvasLocation" x="2184" y="-401"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="83D-7u-PWO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IZf-1K-uKG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="aboutMenu" id="sBl-yR-Mgf">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="YQg-8B-MsB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="all-Db-aMJ" kind="relationship" relationship="rootViewController" id="Spl-pA-JNc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDJ-a2-B3h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="-175"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Default" width="375" height="667"/>
         <image name="aboutMenu" width="25" height="28"/>
         <image name="blackDegrade" width="750" height="400"/>
         <image name="commentMark" width="32" height="32"/>

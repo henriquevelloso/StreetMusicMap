@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C55616471AC07E30004A4805 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C55616461AC07E30004A4805 /* HomeViewController.m */; };
 		C556164B1AC07E5A004A4805 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C556164A1AC07E5A004A4805 /* MapViewController.m */; };
-		C556164E1AC07E73004A4805 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C556164D1AC07E73004A4805 /* AboutViewController.m */; };
 		C55810B51AB9035A0074836F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810B41AB9035A0074836F /* main.m */; };
 		C55810B81AB9035A0074836F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C55810B71AB9035A0074836F /* AppDelegate.m */; };
 		C55810C11AB9035A0074836F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C55810BF1AB9035A0074836F /* Main.storyboard */; };
@@ -48,6 +47,7 @@
 		C571FDC71AC0BD4A00652942 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDC51AC0BD3500652942 /* QuartzCore.framework */; };
 		C571FDCC1AC20B8F00652942 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDCB1AC20B8F00652942 /* MediaPlayer.framework */; };
 		C571FDCE1AC20FF100652942 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C571FDCD1AC20FF100652942 /* AVFoundation.framework */; };
+		C599F3121B1E641D006E1B29 /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C599F3111B1E641D006E1B29 /* AboutTableViewController.m */; };
 		C59D36151B1E47C300965C32 /* KMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C59D36141B1E47C300965C32 /* KMLParser.m */; };
 		C59D36171B1E48DB00965C32 /* StreetMusicMap.kml in Resources */ = {isa = PBXBuildFile; fileRef = C59D36161B1E48DB00965C32 /* StreetMusicMap.kml */; };
 		C59D36181B1E48F700965C32 /* StreetMusicMap.kml in Sources */ = {isa = PBXBuildFile; fileRef = C59D36161B1E48DB00965C32 /* StreetMusicMap.kml */; };
@@ -115,8 +115,6 @@
 		C55616461AC07E30004A4805 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ViewController/HomeViewController.m; sourceTree = "<group>"; };
 		C55616491AC07E5A004A4805 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = ViewController/MapViewController.h; sourceTree = "<group>"; };
 		C556164A1AC07E5A004A4805 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = ViewController/MapViewController.m; sourceTree = "<group>"; };
-		C556164C1AC07E73004A4805 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = ViewController/AboutViewController.h; sourceTree = "<group>"; };
-		C556164D1AC07E73004A4805 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = ViewController/AboutViewController.m; sourceTree = "<group>"; };
 		C55810AF1AB9035A0074836F /* StreetMusicMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetMusicMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55810B31AB9035A0074836F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C55810B41AB9035A0074836F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -186,6 +184,8 @@
 		C571FDC51AC0BD3500652942 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C571FDCB1AC20B8F00652942 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C571FDCD1AC20FF100652942 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C599F3101B1E641D006E1B29 /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutTableViewController.h; path = ViewController/AboutTableViewController.h; sourceTree = "<group>"; };
+		C599F3111B1E641D006E1B29 /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutTableViewController.m; path = ViewController/AboutTableViewController.m; sourceTree = "<group>"; };
 		C59D36131B1E47C300965C32 /* KMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KMLParser.h; sourceTree = "<group>"; };
 		C59D36141B1E47C300965C32 /* KMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KMLParser.m; sourceTree = "<group>"; };
 		C59D36161B1E48DB00965C32 /* StreetMusicMap.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = StreetMusicMap.kml; sourceTree = "<group>"; };
@@ -493,8 +493,8 @@
 		C5C77D9E1AC47DBF00FF62D2 /* About */ = {
 			isa = PBXGroup;
 			children = (
-				C556164C1AC07E73004A4805 /* AboutViewController.h */,
-				C556164D1AC07E73004A4805 /* AboutViewController.m */,
+				C599F3101B1E641D006E1B29 /* AboutTableViewController.h */,
+				C599F3111B1E641D006E1B29 /* AboutTableViewController.m */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -754,6 +754,7 @@
 				C561DD101AE9742E0008A148 /* LoginWebViewViewController.m in Sources */,
 				C5C77DA21AC4916E00FF62D2 /* Util.m in Sources */,
 				C5FF0CFC1AC8672900114BA1 /* UIButton+WebCache.m in Sources */,
+				C599F3121B1E641D006E1B29 /* AboutTableViewController.m in Sources */,
 				C571FDAC1AC09BD400652942 /* AFURLConnectionOperation.m in Sources */,
 				C571FDB01AC09BD400652942 /* UIImageView+AFNetworking.m in Sources */,
 				C5FF0CF31AC8672900114BA1 /* README.md in Sources */,
@@ -775,7 +776,6 @@
 				C571FDA71AC09BD400652942 /* AFHTTPRequestOperation.m in Sources */,
 				C571FD8C1AC09BC400652942 /* InstagramMedia.m in Sources */,
 				C571FDAB1AC09BD400652942 /* AFSecurityPolicy.m in Sources */,
-				C556164E1AC07E73004A4805 /* AboutViewController.m in Sources */,
 				C571FDAA1AC09BD400652942 /* AFNetworkReachabilityManager.m in Sources */,
 				C571FDAF1AC09BD400652942 /* AFURLSessionManager.m in Sources */,
 				C556164B1AC07E5A004A4805 /* MapViewController.m in Sources */,
@@ -909,7 +909,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Henrique Velloso (RHC38265VH)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StreetMusicMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -925,7 +925,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Henrique Velloso";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = StreetMusicMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -28,17 +28,22 @@
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
 
+    
+//    UITabBarController *tabBarController = (UITabBarController*)self.window.rootViewController;
+//    tabBarController.selectedIndex = 1;
+//    tabBarController.selectedIndex = 0;
+    
 
     return YES;
 }
-
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-    
-    BOOL result = [[InstagramEngine sharedEngine] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
-
-    return result;
-    
-}
+//
+//- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    
+//    BOOL result = [[InstagramEngine sharedEngine] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+//
+//    return result;
+//    
+//}
 
 
 

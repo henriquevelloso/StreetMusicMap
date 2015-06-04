@@ -32,10 +32,12 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>5</string>
+	<string>7</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Where you are?</string>
+	<key>NSLocationWhenInUsageDescription</key>
 	<string>Where you are?</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Where you are?</string>
@@ -61,7 +63,5 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSLocationWhenInUsageDescription</key>
-	<string>Where you are?</string>
 </dict>
 </plist>
